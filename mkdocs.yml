@@ -15,3 +15,7 @@ markdown_extensions:
   - pymdownx.inlinehilite
   - pymdownx.snippets
   - pymdownx.superfences
+extra:
+  analytics:
+    provider: google
+    property: G-T9S48WVHD5
