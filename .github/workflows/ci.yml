@@ -18,4 +18,5 @@ jobs:
       #    key: ${{ github.ref }}
       #    path: .cache
       #- run: pip install mkdocs-material mkdocs-git-authors-plugin mkdocs-git-committers-plugin mkdocs-git-revision-date-plugin mkdocs-pdf-export-plugin mkdocs-macros-plugin
+      - run: pip install mkdocs-material
       - run: mkdocs gh-deploy --force --clean --verbose
