@@ -1,12 +1,26 @@
 site_name: MooGoo Knowledge Management
+
 nav:
-  - Database:
-    - PostgreSQL: database/postgresql.md
-    - SQLite: database/sqlite.md
+  - Tech:
+    - Database:
+      - PostgreSQL: tech/postgresql.md
+      - SQLite: tech/sqlite.md
+    - Git: tech/git.md
+    - Docker: tech/docker.md
+    - Unix/Linux: tech/unix-linux.md
+    - AWS: tech/aws.md
+
 theme:
   name: 'material'
+  custom_dir: overrides
   features:
     - content.code.copy
+
+plugins:
+  - blog:
+      blog_dir: blog
+      post_dir: "{blog}/posts"
+
 markdown_extensions:
   - pymdownx.highlight:
       anchor_linenums: true
@@ -15,6 +29,7 @@ markdown_extensions:
   - pymdownx.inlinehilite
   - pymdownx.snippets
   - pymdownx.superfences
+
 extra:
   analytics:
     provider: google

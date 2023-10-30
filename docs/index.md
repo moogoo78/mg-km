@@ -1,1 +1,27 @@
-# test
+# Code Inside Out
+
+Interesting stuff in Embedded Systems and IoT Applications.\
+From hardware to cloud applications. Step by step.
+(ﾉ ◕ ヮ ◕)ﾉ*:・ﾟ ✧
+
+[snippets](mg-snippets.md)
+
+[blog](blog/index.md)
+
+::: row
+
+    ::: col
+
+        ## :material-book: Blog
+
+        Each post is what I've learned, and I wrote them down to share. Hope you'll find something interesting there.
+
+        [Read news](blog/){.md-button}
+
+    ::: col
+
+        ## :material-file-code: Projects
+
+        A list of my projects which are done for learning and practicing in free time. Wanna give me a hand ?! Let's do it together.
+
+        [See projects](projects/){.md-button}
