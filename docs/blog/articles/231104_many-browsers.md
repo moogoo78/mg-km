@@ -13,7 +13,11 @@ categories:
 
 不知道在那邊看到[Sidekick Browser](https://www.meetsidekick.com/)這個強調高生產力的瀏覽器，引起我的興趣，我使用Vivaldi/Opera已經很長的時間了，Chrome一直要人登入很煩，Firefox很沒有特色，我突然也想到前陣子看到的[Arc](https://arc.net/)瀏覽器，突然就想來試用一下各種新的瀏覽器。
 
+
+muu
+
 <!-- more -->
+
 ## 新一代基於Chromium引擎
 
 ### Arc
@@ -24,9 +28,18 @@ categories:
 
 ### Sidekick
 
+## 眾多基於Chromium引擎
+
 強調高生產力(Productivity)，有App設計，可以快速切換同一網頁的各種帳號，雖然很好用，但對我來說，卻是有點複雜，要開網頁時還要想一下，有沒有在Sidekick安裝的App裡，還說直接連網頁比較單純。瀏覽器需要登入，也是很討厭。
 
-## 其他
+### Vivaldi
+
+原本的最愛，比較討厭的是偶爾會死當，雖然頻率越來越低，但偶爾發生的時候真的很討厭。
+
+
+### Opera
+
+2016賣給中國後就沒什麼話好說了。
 
 ### Brave
 
