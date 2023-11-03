@@ -1,7 +1,9 @@
-site_name: MooGoo Knowledge Management
+site_name: MooGoo's Documentations
 
 nav:
+  - Home: index.md
   - Tech:
+    - JavaScript: tech/javascript.md
     - Database:
       - PostgreSQL: tech/postgresql.md
       - SQLite: tech/sqlite.md
@@ -9,17 +11,37 @@ nav:
     - Docker: tech/docker.md
     - Unix/Linux: tech/unix-linux.md
     - AWS: tech/aws.md
+    - SRE: tech/sre.md
+  - snippets: tech/snippets.md
+  - Blog:
+    - blog/index.md
 
 theme:
   name: 'material'
-  custom_dir: overrides
+  #custom_dir: overrides
   features:
     - content.code.copy
+    - navigation.tabs
+    - navigation.sections
+    - navigation.expand
+    - navigation.path
+    - navigation.top
+  palette:
+    - scheme: slate
+      primary: light blue
+      accent: yellow
+  font:
+    text: Roboto
+    code: Roboto Mono
 
 plugins:
   - blog:
-      blog_dir: blog
-      post_dir: "{blog}/posts"
+      post_dir: "{blog}/articles"
+      post_date_format: yyyy.MM.dd
+      post_url_date_format: yyyy-MM-dd
+      post_readtime: false
+      post_excerpt_separator: <!-- more -->
+  - search
 
 markdown_extensions:
   - pymdownx.highlight:
@@ -34,3 +56,5 @@ extra:
   analytics:
     provider: google
     property: G-T9S48WVHD5
+#extra_css:
+#  - stylesheets/extra.css

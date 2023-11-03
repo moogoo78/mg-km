@@ -1,7 +1,6 @@
-# MooGoo's Knowledge Management
+# MooGoo's Docs
 
-mostly about IT.
 
-site: [TBIA Documentations 公開文件](https://moogoo78.github.io/mg-km/)
+site: [MooGoo's Documentations](https://moogoo78.github.io/mg-docs/)
 
 by [MkDocs](https://www.mkdocs.org/), [Material for MkDocs](https://squidfunk.github.io/mkdocs-material/)

@@ -1,4 +1,4 @@
-FROM squidfunk/mkdocs-material
+FROM squidfunk/mkdocs-material:9
 
 RUN pip install --no-cache-dir \
   mkdocs-blog-plugin
