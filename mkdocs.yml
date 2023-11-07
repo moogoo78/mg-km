@@ -3,6 +3,7 @@ site_name: MooGoo's Documentations
 nav:
   - Home: index.md
   - Tech:
+    - snippets: tech/snippets.md
     - JavaScript: tech/javascript.md
     - Database:
       - PostgreSQL: tech/postgresql.md
@@ -12,7 +13,6 @@ nav:
     - Unix/Linux: tech/unix-linux.md
     - AWS: tech/aws.md
     - SRE: tech/sre.md
-  - snippets: tech/snippets.md
   - Blog:
     - blog/index.md
 
