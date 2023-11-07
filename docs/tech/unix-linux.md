@@ -2,6 +2,13 @@
 
 ## Command lines
 
+
+```bash title="count files"
+ls -l | wc -l
+find . -type f |wc -l
+```
+
+
 ```bash
 do something 2>&1
 ```
