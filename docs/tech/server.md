@@ -9,6 +9,15 @@
 ## Nginx
 
 
+### config
+
+test config file
+
+```bash
+nginx -t
+```
+
+### Common Issues
 
 413 Request Entity Too Large
 
