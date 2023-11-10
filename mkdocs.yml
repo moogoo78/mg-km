@@ -11,6 +11,7 @@ nav:
       - Git: tech/git.md
       - Docker: tech/docker.md
     - Programming Language:
+      - Python: tech/python.md
       - JavaScript: tech/javascript.md
     - Database:
       - PostgreSQL: tech/postgresql.md
