@@ -2,7 +2,14 @@
 
 ## How-to
 
-```python title="copy files/folders"
+
+### file and directories
+
+```python title="mkdir"
+Path.mkdir(parents=True, exist_ok=True) # parents=True: mkdir -p, exist_ok: ignore error if folder exist
+```
+
+```python title="copy files or folder"
 import shutil
 
 shutil.copyfile(src, dst)
