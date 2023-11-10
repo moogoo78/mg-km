@@ -30,6 +30,24 @@ sudo dpkg-reconfigure locales
 
 ## Desktop
 
+### 輸入法
+
+切換語系 `Super Key + Space` | 切換輸入法 `Ctrl + Shift`
+
+[ChineseInputMethod - Debian Wiki](https://wiki.debian.org/ChineseInputMethod)
+
+```bash title="設定輸入法"
+im-config
+```
+
+```bash
+apt install fcitx5-chewyin ?
+```
+
+### Ref
+
+- [Fcitx - 維基百科，自由的百科全書](https://zh.wikipedia.org/zh-tw/Fcitx)
+- [小麥注音輸入法 on X: "我們更新了首頁 (https://t.co/7hY7IzhQJi)，修改了我們使用的社群網路平台，未來版本資訊也會從該處發布。歡迎舊雨新知前往，繼續給予指教！" / X](https://twitter.com/McBopomofo/status/1714799933969023391)
 
 ## examples
 
