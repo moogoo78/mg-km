@@ -24,6 +24,12 @@ file descriptor:
 
 - `su my-user` 跟 `su - my-user` 的差別，多了一個 `-` 就是會把該user的環境變數跟shell配置代入，如果沒有`-`的話，就是沿用目前用戶的環境變數。
 
+```bash title="設定語言"
+sudo dpkg-reconfigure locales
+```
+
+## Desktop
+
 
 ## examples
 
