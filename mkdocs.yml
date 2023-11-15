@@ -13,9 +13,11 @@ nav:
     - Programming Language:
       - Python: tech/python.md
       - JavaScript: tech/javascript.md
-    - Database:
-      - PostgreSQL: tech/postgresql.md
-      - SQLite: tech/sqlite.md
+      - Database:
+        - SQL Syntax: tech/sql_syntax.md
+        - PostgreSQL: tech/postgresql.md
+        - MySQL: tech/mysql.md
+        - SQLite: tech/sqlite.md
   - Blog:
     - blog/index.md
 
