@@ -3,11 +3,12 @@
 ## Useful Command lines
 
 
+### Files and Directories
+
 ```bash title="count files"
 ls -l | wc -l
 find . -type f |wc -l
 ```
-
 
 ```bash
 do something 2>&1
@@ -19,6 +20,22 @@ file descriptor:
 - 2: stderr
 
 `2>&1`就是把stderr redirect 到 stdout
+
+
+
+### File Coding
+
+```bash title="check file MIME coding"
+file -ib {foo}
+```
+- -b brief output (ignore file name)
+- -i include MIME-type information
+but maybe wrong, ex: file indicated "ISO-8859-1", but it's cp950.
+
+```bash title="iconv"
+iconv -f cp950 -t UTF-8 {input-file} > {output-file}
+```
+
 
 ## System Admin
 
