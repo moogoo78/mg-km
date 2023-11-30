@@ -7,6 +7,7 @@ nav:
     - Unix/Linux: tech/unix-linux.md
     - Server: tech/server.md
     - OS/Desktop: tech/os.md
+    - Security: tech/security.md
     - Tools:
       - Git: tech/git.md
       - Docker: tech/docker.md
