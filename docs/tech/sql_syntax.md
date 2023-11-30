@@ -67,3 +67,12 @@ SELECT COUNT(*) AS cnt from {table} GROUP BY {col1} HAVING cnt > 5 ORDER BY cnt 
 -- 欄位 col1 不重複, 符合條件, 總共筆數
 SELECT COUNT(DISTINCT {col1}) FROM {table} WHERE {col2} ...
 ```
+
+## Complex
+
+CAST string to int and use REGEX_REPLACE to clean out non-number char
+
+```sql title="if field_number is 6751 of 3 => will be selected"
+select * from record where id > 173 and id <180 and cast(regexp_replace(field_number, '[^0-9]+', '', 'g') as Integer) > 6000;
+```
+最好也要把‘’空字串排除，不然遇到沒有數字的還是會cast error
