@@ -7,7 +7,6 @@ categories:
   - Develop
 ---
 
-[應用 OWASP ZAP 進行自動化網站弱掃 | 網絡行動科技](https://netivism.com.tw/blog/518)
 
 [ZAP – ZAP - Baseline Scan](https://www.zaproxy.org/docs/docker/baseline-scan/)
 
@@ -27,3 +26,9 @@ services:
 TEST_DOMAIN=example.com
 TEST_REPORT_FILENAME=testreport
 ```
+
+執行 `docker compose up` 就可以了，之後也可以加到自動測試流程裡，透過docker networks直接掃開發版。
+
+## 參考
+
+- [應用 OWASP ZAP 進行自動化網站弱掃 | 網絡行動科技](https://netivism.com.tw/blog/518)
