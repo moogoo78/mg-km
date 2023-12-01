@@ -2,6 +2,28 @@
 
 ## Useful Command lines
 
+### Shell
+
+帳號的shell設定都是寫在 `/etc/passwd`
+
+看目前的shell
+```bash
+echo $0
+# or
+ps -p $$
+#or
+echo $SHELL
+```
+
+列出系統的shells
+
+```bash
+cat /etc/shells
+```
+
+```bash title="設定預設的shell"
+chsh -s /bin/zsh
+```
 
 ### Files and Directories
 
