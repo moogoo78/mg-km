@@ -25,15 +25,9 @@ cat /etc/shells
 chsh -s /bin/zsh
 ```
 
-### Files and Directories
-
-```bash title="count files"
-ls -l | wc -l
-find . -type f |wc -l
-```
-
 ```bash
 do something 2>&1
+
 ```
 file descriptor:
 
@@ -42,6 +36,25 @@ file descriptor:
 - 2: stderr
 
 `2>&1`就是把stderr redirect 到 stdout
+
+### Files and Directories
+
+#### count, sum
+
+```bash title="count files"
+ls -l | wc -l
+find . -type f |wc -l
+```
+
+```bash title="count files per directory"
+du -a | cut -d/ -f2 | sort | uniq -c | sort -nr
+```
+via: https://stackoverflow.com/a/39622947/644070
+
+- `du -a`: list all files include directory ( 416  ./images/path/to => 416 is size)
+- `cut -d/ -f2`: remove sections from each line of files, -d: delimiter, -f: select only these fields (把下一層目錄，這邊是`image` 取出)
+- `uniq -c`: -c: count
+- `sort -nr`: -n: numeric-sort, -r: reverse
 
 
 
