@@ -82,7 +82,9 @@ SELECT setval('my_sequence_name', (SELECT max(id) FROM my_table));
 
 
 
+## Reference
 
+- [Choosing a Postgres Primary Key](https://supabase.com/blog/choosing-a-postgres-primary-key)
 
 
 

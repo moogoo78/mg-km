@@ -4,10 +4,12 @@ nav:
   - Home: index.md
   - Tech:
     - snippets: tech/snippets.md
-    - Unix/Linux: tech/unix-linux.md
-    - Server: tech/server.md
-    - OS/Desktop: tech/os.md
     - Security: tech/security.md
+    - Systems, Platforms, Services:
+      - Unix/Linux: tech/unix-linux.md
+      - Server: tech/server.md
+      - OS/Desktop: tech/os.md
+      - AWS: tech/aws.md
     - Tools:
       - Git: tech/git.md
       - Docker: tech/docker.md

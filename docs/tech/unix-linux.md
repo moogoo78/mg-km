@@ -58,8 +58,21 @@ but maybe wrong, ex: file indicated "ISO-8859-1", but it's cp950.
 iconv -f cp950 -t UTF-8 {input-file} > {output-file}
 ```
 
+### Networks
 
-## System Admin
+```bash title="connect by samba"
+smbclient //some-ip/folder -U my-username
+
+smb: \> ls
+```
+
+```bash title="mount windows"
+sudo mount -t cifs //some-ip/path my-local/ -o username=my-username,password=my-password
+```
+
+`smbmount` or `smbfs` seems deprecated, use `cifs` instead (Debian package: `cifs-utils`)
+
+### System Admin
 
 - `su my-user` 跟 `su - my-user` 的差別，多了一個 `-` 就是會把該user的環境變數跟shell配置代入，如果沒有`-`的話，就是沿用目前用戶的環境變數。
 
