@@ -27,6 +27,7 @@ nav:
 theme:
   name: 'material'
   #custom_dir: overrides
+  favicon: images/favicon.ico
   features:
     - content.code.copy
     - navigation.tabs
@@ -34,10 +35,10 @@ theme:
     - navigation.expand
     - navigation.path
     - navigation.top
-  palette:
-    - scheme: slate
-      primary: light blue
-      accent: yellow
+  #palette:
+  #  - scheme: slate
+  #    primary: light blue
+  #    accent: yellow
   font:
     text: Roboto
     code: Roboto Mono
