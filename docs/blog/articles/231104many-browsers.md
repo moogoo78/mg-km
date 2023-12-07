@@ -7,7 +7,7 @@ categories:
   - Review
 ---
 
-# 試用各種瀏覽器(2023) - 除了Chrome、IE Edge、Firefox、Safari、Vivaldi、Opera之外
+# 試用各種瀏覽器(2023) - Arc, Sidekick, Chrome、IE Edge、Firefox、Safari、Vivaldi、Opera, Floorp...
 
 ```text title="changelog"
 23.12.07 更新
