@@ -5,6 +5,7 @@ nav:
   - Tech:
     - snippets: tech/snippets.md
     - Security: tech/security.md
+    - Persistant Identifier: tech/pid.md
     - Systems, Platforms, Services:
       - Unix/Linux: tech/unix-linux.md
       - Server: tech/server.md

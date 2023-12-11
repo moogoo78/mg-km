@@ -7,7 +7,7 @@ services:
       context: .
       dockerfile: ./Dockerfile
     image: mg-docs
-    restart: always
+    restart: no
     ports:
       - "8031:8000"
     #environment:
