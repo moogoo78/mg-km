@@ -32,3 +32,23 @@ ref:
 ### PIL, PILLOW
 
 `Image.ANTIALIAS` 新版改成 `Image.Resampling.LANCZOS`
+
+### Build exe file
+
+- [Nuitka/Nuitka: Nuitka is a Python compiler written in Python.](https://github.com/Nuitka/Nuitka)
+  - [PyInstaller より圧倒的に優れている Nuitka の使い方とハマったポイント | つくみ島だより](https://blog.tsukumijima.net/article/python-nuitka-usage/)
+
+### GUI
+
+- [Beutiful GUI’s Built With Python. Welcome back! Python is one of my… | by Manpreet Singh | Medium](https://preettheman.medium.com/beutiful-guis-built-with-python-bf58a8f28d40)
+
+## Reference
+
+### Learning Resource
+
+- [Ten thousand meters - Python behind the scenes](https://tenthousandmeters.com/tag/python-behind-the-scenes/)
+- [dabeaz-course/python-mastery: Advanced Python Mastery (course by @dabeaz)](https://github.com/dabeaz-course/python-mastery?utm_source=hackernewsletter&utm_medium=email&utm_term=code) exercise codes with PDF
+
+### Related with R
+
+- [Statistics in Python with R, Liang Bo Wang](http://blog.liang2.tw/2014-pyR-stat/?full#cover) Python與R的關係，強項在那裡
