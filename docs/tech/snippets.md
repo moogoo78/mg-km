@@ -1,5 +1,11 @@
 # MG's Snippets
 
+## tools
+
+check your ip
+
+[https://checkip.amazonaws.com/](https://checkip.amazonaws.com/)
+
 ## Bookmarklet
 
 ```javascript title="markdown link"
@@ -13,6 +19,8 @@ javascript:(function()%7Bt='%5B'+decodeURIComponent(document.title)+'%5D('+decod
 ```javascript title="open textarea"
 javascript:(function()%7Bwin=window.open('','_new','location=no,links=no,scrollbars=no,toolbar=no,width=800,height=600');win.document.write('%3Cform%3E%3Ctextarea%20rows=%2230%22%20cols=%2280%22%3E%3C/textarea%3E%3C/form%3E');%7D)()
 ```
+
+## Python
 
 ```python title="write csv"
 import csv
@@ -34,4 +42,33 @@ with open('names.csv', newline='') as csvfile:
     reader = csv.DictReader(csvfile)
     for row in reader:
         print(row['first_name'], row['last_name'])
+```
+
+```python title="change all file with JPG extension to jpg (lower-case)"
+from pathlib import Path
+import os
+
+for r, d, f in os.walk('/path/to'):
+    for x in f:
+        if '.JPG' in x:
+            p = Path(r, x)
+            p.rename(Path(r, x.replace('.JPG', 'jpg')))
+```
+
+
+## JavaScript
+
+```javascript title="IIFE (Immediately Invoked Function Expression)"
+(function() {
+  'use strict';
+  // ...
+})();
+```
+[IIFE - MDN Web Docs Glossary: Definitions of Web-related terms | MDN](https://developer.mozilla.org/en-US/docs/Glossary/IIFE)
+
+
+## HTML
+
+```html title="link no blank tab"
+target="_blank" rel="noreferrer noopener
 ```

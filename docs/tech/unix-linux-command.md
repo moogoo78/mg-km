@@ -37,7 +37,51 @@ file descriptor:
 
 `2>&1`就是把stderr redirect 到 stdout
 
+
+### Editing file
+
+```bash title="delete some columns in csv"
+cut -d, -f [range]
+```
+examples:
+
+test.csv
+
+> A,B,C,D,E,F,G,H
+
+
+```bash
+cut -d, -f 1 < test.csv # A
+cut -d, -f 1-5 < test.csv # A,B,C,D,E
+cut -d, -f 1-3,6- < test.csv # A,B,C,F,G,H
+```
+
+```bash title="append , to each file in csv"
+sed 's/$/,/' input_file > output_file
+```
+
 ### Files and Directories
+
+#### find and ...
+
+```bash
+find . -size -5k -type f
+```
+
+```bash title="find all folders and delete OS thumb files"
+find . -name ".DS_Store" -delete
+find . -type f -name '._*' -delete
+find . -type f -not -name '._*' -size -5k
+
+```
+
+```bash title="count number of files"
+find [path] -type f | wc -l
+```
+
+``` bash title="batch change extension to lower case (.JPG → .jpg)"
+for f in *.JPG; do mv "$f" “${f%.JPG}.jpg”; done
+```
 
 #### count, sum
 
@@ -57,6 +101,39 @@ via: https://stackoverflow.com/a/39622947/644070
 - `sort -nr`: -n: numeric-sort, -r: reverse
 
 
+```bash title="find file numbers in each folder"
+find . -type f | cut -d/ -f2 | sort | uniq -c
+du -a | cut -d/ -f2 | sort | uniq -c | sort -nr
+```
+via: https://stackoverflow.com/a/54305758/644070
+
+
+### process data (awk, sed, grep, tr)
+
+```bash title="get url and download file in structured text file"
+cat foo.csv | awk -F, '{print "curl -O https://url.to/"$3".jpg"}' | bash
+```
+
+```bash title="my-mp3-list.txt"
+#3-Let It Go,https://www.youtube.com/watch?v=L0MK7qz13bU
+awk -F, '{print "youtube-dl " $2 " -x --audio-format mp3 -o " $1 ".mp3"}' my-mp3-list.txt > mp3-cmds.sh
+./mp3-cmds.sh
+```
+
+```bash title=" get certain attribute value in HTML tag"
+# single quote
+grep -rho 'data-ga-category="[^"]*"' ./path/to | sed 's/data-ga-category="//' | sed 's/"$//' | uniq > ga-category.txt
+# double quote
+grep -rho 'data-ga-category="[^"]*"' ./path/to | sed 's/data-ga-category="//' | sed 's/"$//' | uniq >> ga-category.txt
+```
+
+```bash title="replace line-break (\n) to ,"
+tr '\n' ',' < source-file
+```
+
+```bash title=" delete character"
+tr -d `\n` < source-file
+```
 
 ### File Coding
 
@@ -72,6 +149,22 @@ iconv -f cp950 -t UTF-8 {input-file} > {output-file}
 ```
 
 ### Networks
+
+telnet & openssl:
+```bash title="連線測試"
+telnet my-host.com 80
+GET / HTTP/1.1
+Host: my-host.com
+Connection: close (自動關閉連線)
+```
+
+```bash title="https連線測試"
+openssl s_client -connect my-host.com:443
+GET / HTTP/1.1
+Host: my-host.com
+Connection: close (自動關閉連線)
+```
+
 
 ```bash title="connect by samba"
 smbclient //some-ip/folder -U my-username
@@ -93,32 +186,25 @@ sudo mount -t cifs //some-ip/path my-local/ -o username=my-username,password=my-
 sudo dpkg-reconfigure locales
 ```
 
-## Desktop
-
-### 輸入法
-
-切換語系 `Super Key + Space` | 切換輸入法 `Ctrl + Shift`
-
-[ChineseInputMethod - Debian Wiki](https://wiki.debian.org/ChineseInputMethod)
-
-```bash title="設定輸入法"
-im-config
-```
-
+test HD Performance, use the dd command to measure server throughput (write speed):
 ```bash
-apt install fcitx5-chewyin ?
+dd if=/dev/zero of=/tmp/test1.img bs=1G count=1 oflag=dsync
+```
+[Linux and Unix Test Disk I/O Performance With dd Command - nixCraft](https://www.cyberciti.biz/faq/howto-linux-unix-test-disk-performance-with-dd-command/)
+
+
+### Multimedia
+
+```bash title="conver mp3 (ffmpeg)"
+find *.wav -exec ffmpeg -i {} {}.mp3 \;
 ```
 
-### Ref
+## Other examples
 
-- [Fcitx - 維基百科，自由的百科全書](https://zh.wikipedia.org/zh-tw/Fcitx)
-- [小麥注音輸入法 on X: "我們更新了首頁 (https://t.co/7hY7IzhQJi)，修改了我們使用的社群網路平台，未來版本資訊也會從該處發布。歡迎舊雨新知前往，繼續給予指教！" / X](https://twitter.com/McBopomofo/status/1714799933969023391)
-
-## examples
-
-#!/bin/bash
 
 ```bash title="check AWS S3 key exists by a key list in a file (keys.txt) and output not exist results"
+
+#!/bin/bash
 output_file="nonexistent_keys.txt"
 
 while IFS= read -r key; do

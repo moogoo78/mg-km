@@ -14,14 +14,20 @@ nav:
     - Tools:
       - Git: tech/git.md
       - Docker: tech/docker.md
+      - Mkdocs-material: tech/mkdocs-material.md
     - Programming Language:
       - Python: tech/python.md
       - JavaScript: tech/javascript.md
     - Database:
-        - SQL Syntax: tech/sql_syntax.md
-        - PostgreSQL: tech/postgresql.md
-        - MySQL: tech/mysql.md
-        - SQLite: tech/sqlite.md
+      - SQL Syntax: tech/sql_syntax.md
+      - PostgreSQL: tech/postgresql.md
+      - MySQL: tech/mysql.md
+      - SQLite: tech/sqlite.md
+      - DuckDB: tech/duckdb.md
+    - Design:
+      - Desgin: design/design.md
+      - Web Design: design/web_design.md
+      - Resources: design/web_design_resources.md
   - Blog:
     - blog/index.md
 

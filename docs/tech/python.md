@@ -1,5 +1,7 @@
 # Python
 
+[Status of Python versions](https://devguide.python.org/versions/)
+
 ## How-to
 
 
@@ -41,6 +43,33 @@ ref:
 ### GUI
 
 - [Beutiful GUI’s Built With Python. Welcome back! Python is one of my… | by Manpreet Singh | Medium](https://preettheman.medium.com/beutiful-guis-built-with-python-bf58a8f28d40)
+
+### SQLAlchemy
+
+```python
+query = session.query(UserSong)
+query = query.join(Song, Song.id == UserSong.song_id)
+query = query.filter(
+    and_(
+        UserSong.user_id == user.id, 
+        UserSong.is_liked.is_(True),
+        Song.genre == 'rock'
+    )
+)
+# Note: important to place `with_entities` after the join
+query = query.with_entities(func.count())
+liked_count = query.scalar()
+
+sql_qry = select([foo.c.id.label("id"), 
+                  foo.c.title.label("title"), 
+                  bar.c.name.label("name")], 
+                 foo.c.id == bar.c.foo_id)
+
+my_result_qry = session.query(MyResult).from_statement(sql_qry)
+for x in my_result_qry.all():
+    print x
+```
+
 
 ## Reference
 
