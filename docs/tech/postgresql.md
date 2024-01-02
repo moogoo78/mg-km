@@ -4,6 +4,8 @@
 
 ### Dump/Import
 
+如果要部分資料匯出，如果不是用client界面，似乎只能用csv匯出，csv 匯入也是用 `\copy` ? [PostgreSQL: Documentation: 16: COPY](https://www.postgresql.org/docs/current/sql-copy.html)
+
 ```bash title="dump"
 
 $ pg_dump -U USERNAME DBNAME > dbexport.pgsql
@@ -99,9 +101,7 @@ TRUNCATE table_name RESTART IDENTITY;
 SELECT setval('my_sequence_name', (SELECT max(id) FROM my_table));
 ```
 
-```sql title="update last sequence id"
-SELECT setval('foo_id_seq', (SELECT max(id) FROM foo));
-```
+通常是執行了帶有auto-increment id的INSERT INTO，造成sequence沒有更新
 
 ## Reference
 

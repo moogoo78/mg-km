@@ -70,6 +70,11 @@ for x in my_result_qry.all():
     print x
 ```
 
+```python title="query json"
+Person.query.filter(Person.source_data['pid'].astext == x)
+```
+要加 `astext` 不然找不到 
+
 
 ## Reference
 

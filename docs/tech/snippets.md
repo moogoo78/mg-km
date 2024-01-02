@@ -66,6 +66,11 @@ for r, d, f in os.walk('/path/to'):
 ```
 [IIFE - MDN Web Docs Glossary: Definitions of Web-related terms | MDN](https://developer.mozilla.org/en-US/docs/Glossary/IIFE)
 
+```javascript title="iterate object entries"
+for (const [key, value] of Object.entries(object1)) {
+  console.log(`${key}: ${value}`);
+}
+```
 
 ## HTML
 
