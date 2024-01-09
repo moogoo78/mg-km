@@ -18,7 +18,9 @@ nav:
     - Programming Language:
       - Python: tech/python.md
       - JavaScript: tech/javascript.md
+      - Other(LISP): tech/other-lang.md
     - Database:
+      - Database: tech/database.md
       - SQL Syntax: tech/sql_syntax.md
       - PostgreSQL: tech/postgresql.md
       - MySQL: tech/mysql.md

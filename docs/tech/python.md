@@ -56,6 +56,11 @@ query = query.filter(
         Song.genre == 'rock'
     )
 )
+
+```python title="join, group by"
+session.query(Collection.name, func.count(Record.collection_id)).select_from(Record).join(Record.collection).group_by(Collection).all()
+```
+
 # Note: important to place `with_entities` after the join
 query = query.with_entities(func.count())
 liked_count = query.scalar()

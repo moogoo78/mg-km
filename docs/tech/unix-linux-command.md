@@ -1,6 +1,10 @@
 # UNIX/Linux
 
-## Useful Command lines
+## Command lines
+
+- [Minimal safe Bash script template - Better Dev](https://betterdev.blog/minimal-safe-bash-script-template/)
+- Mosky slide: [Get Power From Command Line - Speaker Deck](https://speakerdeck.com/mosky/get-power-from-command-line)
+
 
 ### Shell
 
@@ -62,6 +66,12 @@ sed 's/$/,/' input_file > output_file
 
 ### Files and Directories
 
+#### find infile (grep-like)
+- [BurntSushi/ripgrep: ripgrep recursively searches directories for a regex pattern while respecting your gitignore](https://github.com/BurntSushi/ripgrep)
+
+- [ggreer/the_silver_searcher: A code-searching tool similar to ack, but faster.](https://github.com/ggreer/the_silver_searcher)
+
+
 #### find and ...
 
 ```bash
@@ -107,6 +117,14 @@ du -a | cut -d/ -f2 | sort | uniq -c | sort -nr
 ```
 via: https://stackoverflow.com/a/54305758/644070
 
+
+```bash title="count size each dir"
+du -sh *
+```
+
+```bash title="count number of lines in a file"
+cat some_file.txt | wl -c
+```
 
 ### process data (awk, sed, grep, tr)
 
@@ -177,6 +195,10 @@ sudo mount -t cifs //some-ip/path my-local/ -o username=my-username,password=my-
 ```
 
 `smbmount` or `smbfs` seems deprecated, use `cifs` instead (Debian package: `cifs-utils`)
+
+
+很多網路指令都有新的選擇(ifconfig, netstat, route, arp) => `ip`
+[nixCraft - Ugh 😤 ip command is the most significant change in... | Facebook](https://www.facebook.com/story.php?story_fbid=pfbid0FdqzZ1qfoAgsVfmy4g4xFzXQgbbwSrUqkhcNyYydbG7rvLSbMzScHKvdnL93vS2tl&id=100064470498902&mibextid=WiMSqg&paipv=0&eav=AfYS9RvWDVilBhXn9y95xGkEFtCrjT53HS9Su5-cZB7DplUkbfgs9vLDO_M8zhJ-9J8&_rdr)
 
 ### System Admin
 

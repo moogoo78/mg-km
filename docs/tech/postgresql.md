@@ -98,14 +98,11 @@ TRUNCATE table_name RESTART IDENTITY;
 ```
 
 ```sql title="sequence 亂掉 duplicate key error"
-SELECT setval('my_sequence_name', (SELECT max(id) FROM my_table));
+SELECT setval('my_tabel_id_seq', (SELECT max(id) FROM my_table));
 ```
 
 通常是執行了帶有auto-increment id的INSERT INTO，造成sequence沒有更新
 
-## Reference
-
-- [《 PostgreSQL 各版本特性及差異比較表 》 »... - Ant Yi-Feng Tzeng | Facebook](https://www.facebook.com/yftzeng.tw/posts/pfbid02ykJJUubLDfdQ3oZcr88P8WYK9it4UHqv9BKQSYS3UpAGKEwNeeUjC66Heice62cDl)
 
 ### Functions
 
@@ -124,7 +121,7 @@ SELECT setval('my_sequence_name', (SELECT max(id) FROM my_table));
 
 
 ## Reference
-
+- [《 PostgreSQL 各版本特性及差異比較表 》 »... - Ant Yi-Feng Tzeng | Facebook](https://www.facebook.com/yftzeng.tw/posts/pfbid02ykJJUubLDfdQ3oZcr88P8WYK9it4UHqv9BKQSYS3UpAGKEwNeeUjC66Heice62cDl)
 - [Choosing a Postgres Primary Key](https://supabase.com/blog/choosing-a-postgres-primary-key)
 
 

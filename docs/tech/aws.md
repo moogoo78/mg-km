@@ -4,10 +4,17 @@
 
 ## How-to
 
-
 ```bash title="list current profiles"
 aws configure list-profiles
 ```
+
+[Retrieve instance metadata - Amazon Elastic Compute Cloud](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instancedata-data-retrieval.html)
+
+```text
+http://169.254.169.254/latest/meta-data/
+```
+
+
 
 ### S3
 
