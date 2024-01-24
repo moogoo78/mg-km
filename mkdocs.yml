@@ -14,6 +14,7 @@ nav:
     - Tools:
       - Git: tech/git.md
       - Docker: tech/docker.md
+      - tmux: tech/tmux.md
       - Mkdocs-material: tech/mkdocs-material.md
     - Programming Language:
       - Python: tech/python.md
