@@ -64,6 +64,8 @@ cut -d, -f 1-3,6- < test.csv # A,B,C,F,G,H
 sed 's/$/,/' input_file > output_file
 ```
 
+[拿到Excel資料是1個欄位，很多列(Row)，要變成1列很多欄(Column)的形狀](../blog/articles/240130-csv-oneline.md)
+
 ### Files and Directories
 
 #### find infile (grep-like)
