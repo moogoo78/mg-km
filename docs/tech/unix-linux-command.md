@@ -42,30 +42,6 @@ file descriptor:
 `2>&1`就是把stderr redirect 到 stdout
 
 
-### Editing file
-
-```bash title="delete some columns in csv"
-cut -d, -f [range]
-```
-examples:
-
-test.csv
-
-> A,B,C,D,E,F,G,H
-
-
-```bash
-cut -d, -f 1 < test.csv # A
-cut -d, -f 1-5 < test.csv # A,B,C,D,E
-cut -d, -f 1-3,6- < test.csv # A,B,C,F,G,H
-```
-
-```bash title="append , to each file in csv"
-sed 's/$/,/' input_file > output_file
-```
-
-[拿到Excel資料是1個欄位，很多列(Row)，要變成1列很多欄(Column)的形狀](../blog/articles/240130-csv-oneline.md)
-
 ### Files and Directories
 
 #### find infile (grep-like)
@@ -154,6 +130,28 @@ tr '\n' ',' < source-file
 ```bash title=" delete character"
 tr -d `\n` < source-file
 ```
+
+```bash title="delete some columns in csv"
+cut -d, -f [range]
+```
+examples:
+
+test.csv
+
+> A,B,C,D,E,F,G,H
+
+
+```bash
+cut -d, -f 1 < test.csv # A
+cut -d, -f 1-5 < test.csv # A,B,C,D,E
+cut -d, -f 1-3,6- < test.csv # A,B,C,F,G,H
+```
+
+```bash title="append , to each file in csv"
+sed 's/$/,/' input_file > output_file
+```
+
+[拿到Excel資料是1個欄位，很多列(Row)，要變成1列很多欄(Column)的形狀](../blog/articles/240130-csv-oneline.md)
 
 ### File Coding
 
