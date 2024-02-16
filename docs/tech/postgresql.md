@@ -16,6 +16,12 @@ $ # PGPASSWORD="mypassword" pg_dump -U myusername dbname 密碼 > output.sql$ pg
 $ psql -f backup.sql dbname dbuser
 ```
 
+```sql title="import from csv(tab txt) without header"
+COPY target_table FROM '/path/to/file.txt' DELIMITER E'\t' csv;
+```
+`E` is escape to `\t`
+
+
 #### dump specific table
 
 ``` bash
@@ -117,7 +123,32 @@ SELECT setval('my_tabel_id_seq', (SELECT max(id) FROM my_table));
 
 - [Explain PostgreSQL](https://explain.tensor.ru/plan/) 視覺化 explain
 
+## PostGIS
 
+enable postgis extension:
+
+```
+create extension postgis;
+```
+
+check version:
+
+```sql
+SELECT PostGIS_Full_Version();
+```
+
+### shp2pgsql
+
+Shapefile data loader
+
+```bash
+shp2pgsql -i -s 4326 -D foo.shp > output.sql
+```
+[Chapter 4. Data Management](https://postgis.net/docs/using_postgis_dbmanagement.html#shp2pgsql_usage)
+
+- -D: dump format (faster than default insert)
+- -I: greate GiST index on the geometry column
+- -s: SRID
 
 
 ## Reference

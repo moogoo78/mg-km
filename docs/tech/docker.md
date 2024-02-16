@@ -19,6 +19,21 @@
 - [Run x86 Docker containers with Rosetta on Mac | Level Up Coding](https://levelup.gitconnected.com/docker-on-apple-silicon-mac-how-to-run-x86-containers-with-rosetta-2-4a679913a0d5) ⇒ 影響套件: geopandas, pillow Feb 9, 2023
 
 
+### ARG & ENV
+
+`FROM`之前的ARG只有用在FROM那一句，FROM之後就會是空白，所以如果要使用ARG或ENV就還要再FROM之後宣告一次，ARG只存在build image，ENV存在build & run time。
+
+```
+ARG POSTGRES_VERSION
+ARG DEBIAN_RELEASE
+
+FROM postgres:${POSTGRES_VERSION}-${DEBIAN_RELEASE}
+
+ARG POSTGRES_VERSION
+
+RUN echo ${POSTGRES_VERSION}
+```
+
 ### Python
 
 [python-env-series Archives | Docker](https://www.docker.com/blog/tag/python-env-series/)

@@ -6,8 +6,10 @@ nav:
     - snippets: tech/snippets.md
     - Security: tech/security.md
     - Persistant Identifier: tech/pid.md
-    - Systems, Platforms, Services:
+    - GIS: tech/gis.md
+    - Systems, Platforms, Services, Shell:
       - Unix/Linux Commands: tech/unix-linux-command.md
+      - Powershell: tech/powershell.md
       - Server: tech/server.md
       - OS/Desktop: tech/os.md
       - AWS: tech/aws.md

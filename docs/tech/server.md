@@ -3,7 +3,7 @@
 ## Nginx
 
 
-### config
+### test config
 
 ```bash title="test config file"
 nginx -t
@@ -13,6 +13,22 @@ nginx -t
 nginx -T
 ```
 
+### url routing
+
+```text title="multiple path same config"
+location ~ ^/(path1/foo|path2/bar)/ {
+  ...
+}
+```
+
+`~`表示要用regex
+
+```text title="for frontend app routing"
+    location / {
+        root /frontend;
+        try_files $uri /index.html;
+    }
+```
 ### Common Issues
 
 413 Request Entity Too Large

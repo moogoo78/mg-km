@@ -41,19 +41,42 @@ file descriptor:
 
 `2>&1`就是把stderr redirect 到 stdout
 
+### Editing file
 
-### Files and Directories
+```bash title="delete some columns in csv"
+cut -d, -f [range]
+```
+examples:
 
-#### find infile (grep-like)
+test.csv
+
+> A,B,C,D,E,F,G,H
+
+
+```bash
+cut -d, -f 1 < test.csv # A
+cut -d, -f 1-5 < test.csv # A,B,C,D,E
+cut -d, -f 1-3,6- < test.csv # A,B,C,F,G,H
+```
+
+```bash title="append , to each file in csv"
+sed 's/$/,/' input_file > output_file
+```
+
+### 找東西
+
+find infile (grep-like):
+
 - [BurntSushi/ripgrep: ripgrep recursively searches directories for a regex pattern while respecting your gitignore](https://github.com/BurntSushi/ripgrep)
 
 - [ggreer/the_silver_searcher: A code-searching tool similar to ack, but faster.](https://github.com/ggreer/the_silver_searcher)
 
 
-#### find and ...
-
-```bash
+```bash title="find file size < 5k"
 find . -size -5k -type f
+```
+```bash title="find file named: foo and modified in 5 days"
+find . -name foo -mtime 5
 ```
 
 ```bash title="find all folders and delete OS thumb files"
@@ -70,6 +93,11 @@ find [path] -type f | wc -l
 ``` bash title="batch change extension to lower case (.JPG → .jpg)"
 for f in *.JPG; do mv "$f" “${f%.JPG}.jpg”; done
 ```
+
+#### grep
+
+- o, --only-matching: 只印出找到的字串，不會印整行(這個在minified檔案裡很煩)
+- P, --perl-regexp: 可以用regex
 
 #### count, sum
 

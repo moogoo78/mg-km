@@ -94,3 +94,15 @@ console.log(consoleSignatureText, consoleSignatureStyle);
 ### Tools
 
 [NProgress: slim progress bars in JavaScript](https://rstacruz.github.io/nprogress/)
+
+## Package manager
+
+### Yarn
+
+不建議用`npm install -g yarn`，Node.js 14.9/16.9後就有`corepack enable`的指令。enable後，就有yarn的指令可以用了
+
+```bash
+corepack enable
+```
+
+
