@@ -4,6 +4,12 @@
 
 ## How-to
 
+### configure
+
+```bash title="create profile"
+aws configure --profile my-profile
+```
+
 ```bash title="list current profiles"
 aws configure list-profiles
 export AWS_PROFILE=xxx
@@ -34,7 +40,7 @@ aws s3 cp --recursive --metadata-directive REPLACE --content-type "image/jpeg" s
 ```
 
 ```bash title="set all objects public-read"
-aws s3 ls s3://my-bucket/path/to/ --recursive | cut -c 32- | awk '{cmd="aws s3api put-object-act --acl public-read --bucket mybucket --key "$0; system(cmd)}'
+aws s3 ls s3://my-bucket/path/to/ --recursive | awk -F ' ' '{cmd="aws s3api put-object-acl --acl public-read --bucket mybucket --key "$4; system(cmd)}'
 ```
 
-`cut -c 32-`把前32個字元刪除，取後面的key，然後用神奇的awk，搭配 `system`執行命令。
+，取後面的key，然後用神奇的awk，搭配 `system`執行命令。
