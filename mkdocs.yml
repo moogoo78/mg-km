@@ -30,9 +30,9 @@ nav:
       - SQLite: tech/sqlite.md
       - DuckDB: tech/duckdb.md
     - Design:
-      - Desgin: design/design.md
-      - Web Design: design/web_design.md
-      - Resources: design/web_design_resources.md
+      - Desgin: tech/design.md
+      - Web Design: tech/web_design.md
+      - Resources: tech/web_design_resources.md
   - Blog:
     - blog/index.md
 

@@ -15,6 +15,10 @@
 
 install [Debian -- Details of package gnome-tweaks in bookworm](https://packages.debian.org/bookworm/gnome-tweaks), can change `Caps` to `Ctrl`
 
+```bash title="install multiple desktop environment"
+sudo tasksel
+```
+
 ### 輸入法
 
 切換語系 `Super Key + Space` | 切換輸入法 `Ctrl + Shift`

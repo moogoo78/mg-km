@@ -4,6 +4,12 @@
 
 - [Design Principles](https://principles.design/)
 
+
+## Naming
+
+- [Naming things needn’t be hard - Classnames](https://classnames.paulrobertlloyd.com/)
+
+
 ## Color
 
 - [伊登色環真的適合當做學習色彩的基礎嗎？(facebook)](https://www.facebook.com/media/set/?set=a.1993797410644399&type=3)

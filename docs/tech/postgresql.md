@@ -123,6 +123,25 @@ SELECT setval('my_tabel_id_seq', (SELECT max(id) FROM my_table));
 
 - [Explain PostgreSQL](https://explain.tensor.ru/plan/) 視覺化 explain
 
+## Admin
+
+list indexes
+via: [PostgreSQL List Indexes](https://www.postgresqltutorial.com/postgresql-indexes/postgresql-list-indexes/)
+
+```sql
+SELECT
+    tablename,
+    indexname,
+    indexdef
+FROM
+    pg_indexes
+WHERE
+    schemaname = 'public'
+ORDER BY
+    tablename,
+    indexname;
+```
+
 ## PostGIS
 
 enable postgis extension:
@@ -151,6 +170,11 @@ shp2pgsql -i -s 4326 -D foo.shp > output.sql
 - -s: SRID
 
 
+```sql title="Query multipolygon from longitude, latitude"
+SELECT id,name
+FROM named_area
+WHERE ST_Within(ST_SetSRID(ST_POINT(121.51, 24.93),4326), geom_mpoly::geometry);
+```
 ## Reference
 - [《 PostgreSQL 各版本特性及差異比較表 》 »... - Ant Yi-Feng Tzeng | Facebook](https://www.facebook.com/yftzeng.tw/posts/pfbid02ykJJUubLDfdQ3oZcr88P8WYK9it4UHqv9BKQSYS3UpAGKEwNeeUjC66Heice62cDl)
 - [Choosing a Postgres Primary Key](https://supabase.com/blog/choosing-a-postgres-primary-key)
