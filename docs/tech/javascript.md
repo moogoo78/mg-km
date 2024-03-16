@@ -106,3 +106,20 @@ corepack enable
 ```
 
 
+
+## Svelte
+
+原本的 `npm create svelte@latest my-app` 會裝一堆東西，包括sveltekit，用vite安裝純Svelte就好
+
+只要client-side
+
+```bash
+npm init vite myapp
+```
+選單 (JavaScript, TypeScript)
+
+```bash
+cd myapp
+npm install
+npm run dev
+```

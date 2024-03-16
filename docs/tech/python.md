@@ -4,6 +4,15 @@
 
 ## How-to
 
+### String
+
+```python title="padding 0"
+f'{n:03}'
+'%03d' % n
+'{0:03d}'.format(n)
+'{foo:03d}'.format(foo=n)
+'{:03d}'.format(n)
+```
 
 ### file and directories
 
@@ -91,3 +100,25 @@ Person.query.filter(Person.source_data['pid'].astext == x)
 ### Related with R
 
 - [Statistics in Python with R, Liang Bo Wang](http://blog.liang2.tw/2014-pyR-stat/?full#cover) Python與R的關係，強項在那裡
+
+
+## Examples
+
+```python title="copy 100x100 images"
+import os
+from pathlib import Path
+import shutil
+
+
+def copy100(prefix):
+    for r, d, l in os.walk('./source-dir'):
+        for f in l:
+            p = Path(r, f)
+            if p.suffix.upper() == '.JPG':
+                target = Path('target-dir', f'{prefix}-{f}')
+                shutil.copyfile(p, target)
+
+
+for i in range(100):
+    copy100(f'{i:03}')
+```

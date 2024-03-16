@@ -36,7 +36,7 @@ CONVERT( 欄位名稱 using big5) -- only test in mysql
 
 查看database容量:
 
-``sql title="only test in MySQL"
+```sql title="only test in MySQL"
 SELECT table_schema "database_name",
 sum( data_length + index_length ) / 1024 /
 1024 "Data Base Size in MB",
@@ -66,6 +66,18 @@ SELECT COUNT(*) AS cnt from {table} GROUP BY {col1} HAVING cnt > 5 ORDER BY cnt 
 
 -- 欄位 col1 不重複, 符合條件, 總共筆數
 SELECT COUNT(DISTINCT {col1}) FROM {table} WHERE {col2} ...
+```
+
+Group by in aggregate should use having
+
+```sql title="找出group起來count超過2個的"
+SELECT COUNT(*), foo.some_id from (
+    SELECT COUNT(*), some_id, created_datetime::date
+    FROM some_table
+    GROUP BY some_id, created_datetime::date
+    ORDER BY some_id
+) foo
+GROUP BY some_id HAVING count(*) > 1;
 ```
 
 ## Complex

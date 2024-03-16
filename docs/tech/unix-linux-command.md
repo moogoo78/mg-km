@@ -98,6 +98,7 @@ for f in *.JPG; do mv "$f" “${f%.JPG}.jpg”; done
 
 - o, --only-matching: 只印出找到的字串，不會印整行(這個在minified檔案裡很煩)
 - P, --perl-regexp: 可以用regex
+- l, 只有引檔名
 
 #### count, sum
 

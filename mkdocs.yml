@@ -35,7 +35,9 @@ nav:
       - Resources: tech/web_design_resources.md
   - Blog:
     - blog/index.md
-
+  - Music:
+    - music/songs.md
+    - music/kindergarten.md
 theme:
   name: 'material'
   #custom_dir: overrides
