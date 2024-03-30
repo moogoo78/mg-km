@@ -87,7 +87,7 @@ for x in my_result_qry.all():
 ```python title="query json"
 Person.query.filter(Person.source_data['pid'].astext == x)
 ```
-要加 `astext` 不然找不到 
+要加 `astext` 不然找不到
 
 
 ## Reference
@@ -96,6 +96,7 @@ Person.query.filter(Person.source_data['pid'].astext == x)
 
 - [Ten thousand meters - Python behind the scenes](https://tenthousandmeters.com/tag/python-behind-the-scenes/)
 - [dabeaz-course/python-mastery: Advanced Python Mastery (course by @dabeaz)](https://github.com/dabeaz-course/python-mastery?utm_source=hackernewsletter&utm_medium=email&utm_term=code) exercise codes with PDF
+- [Code Review of Senior Python Engineers](https://www.canva.com/design/DAFoVEZETAU/fa33DHLu_PlYHuTWYOAoww/view#1)
 
 ### Related with R
 
