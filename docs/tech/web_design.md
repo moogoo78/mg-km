@@ -60,6 +60,10 @@ via: [Smashing Newsletter](https://mailchi.mp/smashingmagazine/433-dashboards-ma
 
 [How to Design a Dashboard: Design Thinking for Dashboards](https://dataschool.com/how-to-design-a-dashboard/)
 
+## Filter Search Design
+
+- [Designing Filter & Sort for Better UX | by Vosidiy Muslimbek | Bootcamp](https://bootcamp.uxdesign.cc/designing-filter-sort-for-better-ux-9b88f40081db)
+
 ## Width
 
 Bootstrap resolution breakpoint:

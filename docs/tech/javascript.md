@@ -1,5 +1,12 @@
 # JavaScript
 
+## Useful
+
+```javascript title="位數逗號分隔"
+console.log(n.toLocaleString());
+```
+
+
 ## Vanilla
 - [My top JavaScript utilities, in just One Line of Code! | Phuoc Nguyen](https://phuoc.ng/collection/1-loc/)
 - [The JavaScript fetch() method | Go Make Things](https://gomakethings.com/the-javascript-fetch-method/)

@@ -48,3 +48,17 @@ client_max_body_size 8M;
 ```bash
 apache2ctl -S
 ```
+
+### rewrite & redirect
+
+```text
+RewriteEngine on
+
+RedirectMatch "home.php" "http://my-new-site.com"
+RedirectMatch "AjaxTree/some.php" "https://my-new-site.com/tree"
+RewriteCond %{QUERY_STRING} name_code=([^&]+)
+RewriteRule ^/some_detail\.php$ https://my-new-site.com?namecode=%1 [R=302,L]
+# others all redirect to domain's root path
+RewriteRule ^(.*) https://my-new-site.com [L,QSA]
+```
+
