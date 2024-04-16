@@ -38,6 +38,7 @@ nav:
     - music/kindergarten.md
   - Nature:
     - nature/animal-rescue.md
+    - nature/animal-description.md
   - Blog:
     - blog/index.md
 theme:
