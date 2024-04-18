@@ -88,3 +88,8 @@ lg: 1280px
 
 - [Anthony Hobday—Product designer](https://anthonyhobday.com/) 很多關於設計的資源與想法，深入簡出
 - [Table of Contents: The Ultimate Design Guide](https://www.nngroup.com/articles/table-of-contents/?ref=web-design-weekly.com)
+
+
+## simple design
+
+- [音楽ダウンロード・ランキング・歌詞・音楽配信サイト | レコチョク](https://recochoku.jp/)
