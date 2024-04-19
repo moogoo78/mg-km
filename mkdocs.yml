@@ -33,6 +33,7 @@ nav:
       - Desgin: tech/design.md
       - Web Design: tech/web_design.md
       - Resources: tech/web_design_resources.md
+      - Gallery: tech/web_design_gallery.md
   - Music:
     - music/songs.md
     - music/kindergarten.md
@@ -48,7 +49,7 @@ theme:
   features:
     - content.code.copy
     - navigation.tabs
-    - navigation.sections
+    #- navigation.sections
     - navigation.expand
     - navigation.path
     - navigation.top
