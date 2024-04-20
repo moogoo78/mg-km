@@ -132,6 +132,11 @@ sudo du -a /dir/ | sort -n -r | head -n 20
 du -sh *
 ```
 
+```bash title="count folder layer 1 sum size"
+# du -d 1 |sort -nr | cut -f2- | xargs du -hs # mac
+du --max-depth=1 |sort -nr | cut -f2- | xargs du -hs
+```
+
 ```bash title="count number of lines in a file"
 cat some_file.txt | wl -c
 ```
