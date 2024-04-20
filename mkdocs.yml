@@ -29,6 +29,7 @@ nav:
       - MySQL: tech/mysql.md
       - SQLite: tech/sqlite.md
       - DuckDB: tech/duckdb.md
+      - Redis: tech/redis.md
     - Design:
       - Desgin: tech/design.md
       - Web Design: tech/web_design.md

@@ -4,6 +4,8 @@
 
 GUI client: [GitHub - little-brother/sqlite-gui: Lightweight SQLite editor for Windows](https://github.com/little-brother/sqlite-gui?utm_source=hackernewsletter&utm_medium=email&utm_term=data)
 
+[SQLite is not a toy database](https://antonz.org/sqlite-is-not-a-toy-database/)
+
 ## Notice
 
 - SQLite 沒有 truncate, 用 delete from

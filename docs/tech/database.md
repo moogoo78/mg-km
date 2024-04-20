@@ -32,3 +32,10 @@
 ## Performance
 
 - [SQL Indexing and Tuning e-Book for developers: Use The Index, Luke covers Oracle, MySQL, PostgreSQL, SQL Server, ...](https://use-the-index-luke.com/)
+
+## hierarchical
+
+- https://stackoverflow.com/questions/4048151/what-are-the-options-for-storing-hierarchical-data-in-a-relational-database
+- http://troels.arvin.dk/db/rdbms/links/#hierarchical
+- https://vadimtropashko.wordpress.com/2008/08/09/one-more-nested-intervals-vs-adjacency-list-comparison/
+- https://www.slideshare.net/billkarwin/models-for-hierarchical-data

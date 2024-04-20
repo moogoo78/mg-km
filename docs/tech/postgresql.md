@@ -1,6 +1,6 @@
 # PostgreSQL
 
-## How-to
+## How-to (snippets)
 
 ### Dump/Import
 
@@ -80,8 +80,13 @@ from some_table
 
 ref: [PostgreSQL: Documentation: 16: 9.9. Date/Time Functions and Operators](https://www.postgresql.org/docs/current/functions-datetime.html)
 
-### Big data
+### JSON
 
+```sql title="query JSONB"
+select * from specimen_specimen where source_data ->'dups' @> '[{"SN":"69598"}]'
+```
+
+### Big data
 
 
 ```sql title="estimated count"
@@ -110,12 +115,12 @@ SELECT setval('my_tabel_id_seq', (SELECT max(id) FROM my_table));
 通常是執行了帶有auto-increment id的INSERT INTO，造成sequence沒有更新
 
 
-### Functions
+## Functions
 
 - [PostgreSQL: Documentation: 16: Chapter 9. Functions and Operators](https://www.postgresql.org/docs/current/functions.html)
 
 
-### Optimize
+## Optimize
 
 - [How we optimized PostgreSQL queries 100x | by Vadim Markovtsev | Towards Data Science](https://towardsdatascience.com/how-we-optimized-postgresql-queries-100x-ff52555eabe)
 
@@ -176,14 +181,53 @@ FROM named_area
 WHERE ST_Within(ST_SetSRID(ST_POINT(121.51, 24.93),4326), geom_mpoly::geometry);
 ```
 ## Reference
-- [《 PostgreSQL 各版本特性及差異比較表 》 »... - Ant Yi-Feng Tzeng | Facebook](https://www.facebook.com/yftzeng.tw/posts/pfbid02ykJJUubLDfdQ3oZcr88P8WYK9it4UHqv9BKQSYS3UpAGKEwNeeUjC66Heice62cDl)
 - [Choosing a Postgres Primary Key](https://supabase.com/blog/choosing-a-postgres-primary-key)
 
 
+## Versions
 
+- [《 PostgreSQL 各版本特性及差異比較表 》 »... - Ant Yi-Feng Tzeng | Facebook](https://www.facebook.com/yftzeng.tw/posts/pfbid02ykJJUubLDfdQ3oZcr88P8WYK9it4UHqv9BKQSYS3UpAGKEwNeeUjC66Heice62cDl)
 
+### Version 15
 
+[熱騰騰！PostgreSQL 15 大版本更新報你知！【Webinar： PostgreSQL】| 歐立威科技 - YouTube](https://www.youtube.com/watch?v=I-HNa2JJBPA)
 
+#### pg_basebackup
 
+- pg_basebackup -Ft -Z server-zstd -p 5436 -D {PATH} -Pv
+- gzip, LZ4, sztd
+    - 壓縮比: zstd > gzip > LZ4
+    - 花費時間: gzip >> zstd > LZ4
+- zstd 壓縮比 gzip 大一點點，但是時間差很多
+- select pg_current_wal_lsn();
+- wal_compression=zstd
+- ex: 早晚跑一次
+    - 0/750071C8
+    - 0/B90A17A8
+- select pg_size_pretty(pg_wal_lsn_diff(‘0/B90A17A8’, ‘0/750071C8‘))
+    - 1089 MB
+    - 可以看整天的交易量多少
 
+## Backup
 
+- pg_* 的備份 (跟 postgres 版本相依)
+    - pg_dump: logical backup
+        - 產生 SQL statement
+        - 執行比較久
+        - can backup parts of a database
+    - pg_basebackup: physical backup
+        - copy database cluster files
+        - can only backup whole cluster
+        - 可以以時間點隨選還原 Continuous Archiving and Point-in-Time Recovery ([PITR](https://docs.postgresql.tw/server-administration/backup-and-restore/continuous-archiving-and-point-in-time-recovery-pitr))
+
+- pgbackrest
+    - support zstd (不受 Postgres 版本影響)
+    - 金鑰備份
+    - incremental backup and restore
+    - 透過 pg_start_backup, pg_stop_backup, 不影響交易
+    - standby 備份 ? (閒置資源時備份?)
+
+## Tools
+- [pgloader](https://pgloader.io/) - load data from files, such as CSV or Fixed-File Format; or migrate a whole database to PostgreSQL
+
+- [dalibo/pg_activity: pg_activity is a top like application for PostgreSQL server activity monitoring.](https://github.com/dalibo/pg_activity)

@@ -124,6 +124,9 @@ du -a | cut -d/ -f2 | sort | uniq -c | sort -nr
 ```
 via: https://stackoverflow.com/a/54305758/644070
 
+```bash title="count top20 big folders"
+sudo du -a /dir/ | sort -n -r | head -n 20
+```
 
 ```bash title="count size each dir"
 du -sh *
@@ -243,6 +246,7 @@ dd if=/dev/zero of=/tmp/test1.img bs=1G count=1 oflag=dsync
 ```
 [Linux and Unix Test Disk I/O Performance With dd Command - nixCraft](https://www.cyberciti.biz/faq/howto-linux-unix-test-disk-performance-with-dd-command/)
 
+[htop explained | peteris.rocks](https://peteris.rocks/blog/htop/)
 
 ### Multimedia
 
