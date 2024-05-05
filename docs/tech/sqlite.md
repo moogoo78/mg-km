@@ -2,7 +2,15 @@
 
 [SQLite Home Page](https://www.sqlite.org/index.html)
 
-GUI client: [GitHub - little-brother/sqlite-gui: Lightweight SQLite editor for Windows](https://github.com/little-brother/sqlite-gui?utm_source=hackernewsletter&utm_medium=email&utm_term=data)
+## tools
+
+### GUI
+
+- GUI client: [GitHub - little-brother/sqlite-gui: Lightweight SQLite editor for Windows](https://github.com/little-brother/sqlite-gui?utm_source=hackernewsletter&utm_medium=email&utm_term=data)
+
+### schema
+
+- [Screwtape / sqlite-schema-diagram · GitLab](https://gitlab.com/Screwtapello/sqlite-schema-diagram)
 
 [SQLite is not a toy database](https://antonz.org/sqlite-is-not-a-toy-database/)
 

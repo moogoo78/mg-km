@@ -74,6 +74,22 @@ for (const [key, value] of Object.entries(object1)) {
 
 ## HTML
 
+```html title="usual layout structure"
+<html>
+  <head>
+  </head>
+  <body>
+    <main>
+      <header> </header>
+      <section> </section>
+      <section> </section>
+      <section> </section>
+      <footer> </footer>
+    </main>
+  </body>
+</html>
+```
+
 ```html title="link no blank tab"
 target="_blank" rel="noreferrer noopener
 ```
