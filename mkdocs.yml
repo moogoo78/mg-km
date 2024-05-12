@@ -15,8 +15,9 @@ nav:
       - AWS: tech/aws.md
     - Tools:
       - Git: tech/git.md
-      - Docker: tech/docker.md
       - tmux: tech/tmux.md
+      - Docker: tech/docker.md
+      - Emacs: tech/emacs.md
       - Mkdocs-material: tech/mkdocs-material.md
     - Programming Language:
       - Python: tech/python.md

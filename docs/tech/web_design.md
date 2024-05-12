@@ -22,6 +22,12 @@
 ### Search bar
 - [kmenu](https://kmenu.hxrsh.in/) fancy main search for different content
 
+### Navigation
+
+#### Compact Navigation
+
+- [Recent Design Finds: Compact Navigation | Codrops](https://tympanus.net/codrops/2024/04/28/recent-design-finds-compact-navigation/) good gif demos
+
 ### Button
 
 - [Designing A Better Back Button UX — Smashing Magazine](https://www.smashingmagazine.com/2022/08/back-button-ux-design/?utm_source=Web-Design-Weekly.com&utm_medium=Newsletter&utm_campaign=429)
@@ -31,6 +37,10 @@
 - [Loading & progress indicators — UI Components series | by Taras Bakusevych | Jul, 2023 | UX Collective](https://uxdesign.cc/loading-progress-indicators-ui-components-series-f4b1fc35339a)
 
 ![](https://ci4.googleusercontent.com/proxy/lIacB9_bzMM4EV3K82089WKxi6wi_33DE66aEs06oZibA5rqMMgyHZvIqxqVTR6nJlPtsMqgshJp0oCUZ-X5lScwnln5dd-iAZePcVfUUO9RnDuviDV1l0OJUvhtykW5=s0-d-e1-ft#https://images.acblnk.com/images/acumbamail_5J7FmBpyY09yn9VbAENc/loading.webp)
+
+### Cookie Permission
+
+- [Cookie Permissions: 6 Design Guidelines - YouTube](https://www.youtube.com/watch?v=yHOEp539ETk)
 
 ## Design System
 - [DesignSystems.com](https://www.designsystems.com/) Figma's design system

@@ -11,7 +11,7 @@
 1. download [Debian](https://www.debian.org/distrib/) iso image file (default is amd64, compatible with Intel & AMD chip)
 2. make a bootable USB drive (recommanded: [Rufus](https://rufus.ie/en/))
 
-##### Desktop
+#### Desktop
 
 install [Debian -- Details of package gnome-tweaks in bookworm](https://packages.debian.org/bookworm/gnome-tweaks), can change `Caps` to `Ctrl`
 
@@ -19,7 +19,7 @@ install [Debian -- Details of package gnome-tweaks in bookworm](https://packages
 sudo tasksel
 ```
 
-### 輸入法
+#### 輸入法
 
 切換語系 `Super Key + Space` | 切換輸入法 `Ctrl + Shift`
 
@@ -29,8 +29,8 @@ sudo tasksel
 im-config
 ```
 
-```bash
-apt install fcitx5-chewyin ?
+```bash title="Install fcitx5 traditional chinese input"
+apt install fcitx5 fcitx5-chinese-addons fcitx5-chewyin
 ```
 
 reference:
@@ -59,6 +59,10 @@ yum --showduplicate list {package name}
 
 ## Windows
 
+### Desktop
+
+screenshot: `Windows+Shift+S`
+### Servers
 修改local DNS
 
 `C:\WINDOWS\system32\drivers\ect\hosts` 要有管理員權限
