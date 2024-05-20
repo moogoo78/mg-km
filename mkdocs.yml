@@ -2,6 +2,7 @@ site_name: MooGoo's Documentations
 
 nav:
   - Home: index.md
+  - DWC: run-dwc.md
   - Tech:
     - snippets: tech/snippets.md
     - Security: tech/security.md
