@@ -13,6 +13,7 @@ nav:
       - Powershell: tech/powershell.md
       - Server: tech/server.md
       - OS/Desktop: tech/os.md
+      - Architecture: tech/arch.md
       - AWS: tech/aws.md
     - Tools:
       - Git: tech/git.md

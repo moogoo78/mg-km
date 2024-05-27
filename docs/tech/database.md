@@ -2,6 +2,12 @@
 
 [Ask HN: Is PostgreSQL better than MySQL? | Hacker News](https://news.ycombinator.com/item?id=35599118&utm_source=hackernewsletter&utm_medium=email&utm_term=data)
 
+## Relationship
+
+![ER-diagram](https://media.dev.to/cdn-cgi/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fnmife5ost450cgntriyi.png)
+
+via: [Mastering Relational Database Design: A Comprehensive Guide - DEV Community](https://dev.to/louaiboumediene/mastering-relational-database-design-a-comprehensive-guide-3jh8?context=digest)
+
 
 ## New DB
 
@@ -39,3 +45,4 @@
 - http://troels.arvin.dk/db/rdbms/links/#hierarchical
 - https://vadimtropashko.wordpress.com/2008/08/09/one-more-nested-intervals-vs-adjacency-list-comparison/
 - https://www.slideshare.net/billkarwin/models-for-hierarchical-data
+
