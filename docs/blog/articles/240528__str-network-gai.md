@@ -16,7 +16,7 @@ Sunny, STR Network
 
 [與 AI 共同打造一個有機的管理「系統」](https://www.canva.com/design/DAGDaSyyWG8/5pHTDeG7NWcWgpgqKbvH5A/view)
 
-很有啟發，重點不是技術，而是建立系統的過程跟整理。
+很有啟發，重點不是技術，而是建立系統的過程跟思考。
 
 ![slide1](../../assets/blog/str-network_system/str-network_system1.png)
 
