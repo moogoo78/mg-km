@@ -74,7 +74,7 @@ like jQuery
 
 [The vanilla JS Class pattern | Go Make Things](https://gomakethings.com/the-vanilla-js-class-pattern/)
 
-- static
+s- static
 
 - private
 
@@ -97,6 +97,9 @@ var consoleSignatureText = "%cDon't steal my cookies! 🍪";
 console.log(consoleSignatureText, consoleSignatureStyle);
 ```
 
+## async
+
+- [Practical Async JavaScript - DEV Community](https://dev.to/bgdnvarlamov/practical-async-javascript-ep5?context=digest)
 
 ### Tools
 
