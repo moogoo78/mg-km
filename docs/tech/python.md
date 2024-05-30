@@ -13,6 +13,13 @@ f'{n:03}'
 '{foo:03d}'.format(foo=n)
 '{:03d}'.format(n)
 ```
+### data struct
+
+[Sorting Techniques — Python 3.12.3 documentation](https://docs.python.org/3/howto/sorting.html)
+
+```python title="sort by key"
+sorted(student_tuples, key=lambda student: student[2])
+```
 
 ### file and directories
 
@@ -37,6 +44,18 @@ via: https://stackoverflow.com/a/123212/644070
 ref:
 - chatGPT: https://chat.openai.com/share/4be34b81-3eb6-4d99-99cf-20881e2fc831
 - python docs: https://docs.python.org/3/tutorial/controlflow.html#default-argument-values
+
+### datetime
+
+[datetime — Basic date and time types — Python documentation](https://docs.python.org/3/library/datetime.html)
+
+[format codes](https://docs.python.org/3/library/datetime.html#strftime-and-strptime-format-codes)
+
+```python title="strptime"
+datetime.strptime(row['last_login'], '%Y-%m-%d %H:%M:%S+00') # 2021-01-01 12:03:34+00
+datetime.strptime(row['created_time'], '%Y-%m-%d %H:%M:%S.%f+00') # # 2021-01-01 12:03:34.934533+00
+```
+
 
 ## Packages
 
@@ -65,12 +84,15 @@ query = query.filter(
         Song.genre == 'rock'
     )
 )
+```
 
 ```python title="join, group by"
 session.query(Collection.name, func.count(Record.collection_id)).select_from(Record).join(Record.collection).group_by(Collection).all()
 ```
 
-# Note: important to place `with_entities` after the join
+Note: important to place `with_entities` after the join
+
+```python
 query = query.with_entities(func.count())
 liked_count = query.scalar()
 
@@ -80,8 +102,6 @@ sql_qry = select([foo.c.id.label("id"),
                  foo.c.id == bar.c.foo_id)
 
 my_result_qry = session.query(MyResult).from_statement(sql_qry)
-for x in my_result_qry.all():
-    print x
 ```
 
 ```python title="query json"
@@ -103,7 +123,7 @@ Person.query.filter(Person.source_data['pid'].astext == x)
 - [Statistics in Python with R, Liang Bo Wang](http://blog.liang2.tw/2014-pyR-stat/?full#cover) Python與R的關係，強項在那裡
 
 
-## Examples
+## Cookbook
 
 ```python title="copy 100x100 images"
 import os
@@ -122,4 +142,15 @@ def copy100(prefix):
 
 for i in range(100):
     copy100(f'{i:03}')
+```
+
+```python title="change all file with JPG extension to jpg (lower-case)"
+from pathlib import Path
+import os
+
+for r, d, f in os.walk('/path/to'):
+    for x in f:
+        if '.JPG' in x:
+            p = Path(r, x)
+            p.rename(Path(r, x.replace('.JPG', 'jpg')))
 ```
