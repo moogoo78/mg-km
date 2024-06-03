@@ -43,6 +43,7 @@ nav:
   - Nature:
     - nature/animal-rescue.md
     - nature/animal-description.md
+    - nature/animal-behavior.md
     - nature/animal-diff.md
   - Blog:
     - blog/index.md
