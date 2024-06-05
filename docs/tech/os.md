@@ -56,13 +56,28 @@ xz-utils tk-dev libffi-dev liblzma-dev python3-openssl
 yum --showduplicate list {package name}
 ```
 
-
 ## Windows
 
 ### Desktop
 
 screenshot: `Windows+Shift+S`
+
 ### Servers
 修改local DNS
 
 `C:\WINDOWS\system32\drivers\ect\hosts` 要有管理員權限
+
+## File System
+
+via: https://stackoverflow.com/a/466596/644070
+
+|                                       | FAT32        | NTFS                     | EXT4          |
+| ------------------------------------- | ------------ |--------------------------|---------------|
+| Max. # of files               | 268,173,300  | 2^32 - 1 (4,294,967,295) | 2^32 - 1 (4,294,967,295) |
+| Max. # of files per directory | 2^16 - 1 (65,535) |     | 10 million approximately (can be extended with large_dir feature)  |
+| Max. file size                     | 2 GiB - 1 without LFS, 4 GiB - 1 with | - Implementation: 2^44 - 2^6 bytes (16 TiB - 64 KiB) </br>- Theoretical: 2^64 - 2^6 bytes (16 EiB - 64 KiB) | 2^44 - 1 bytes (16 TiB - 1) |
+| Max. volume size            |        | - Implementation: 2^32 - 1 clusters (256 TiB - 64 KiB)</br>- Theoretical: 2^64 - 1 clusters (1 YiB - 64 KiB)  | 2^48 - 1 bytes (256 TiB - 1)  |
+
+```bash title="list filesystem type"
+lsblk -f
+```
