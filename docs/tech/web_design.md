@@ -2,8 +2,30 @@
 
 ## Rules
 
-- [Visual design rules you can safely follow every time](https://anthonyhobday.com/sideprojects/saferules/)
-- [16 little UI design rules that make a big impact - Adham Dannaway](https://www.adhamdannaway.com/blog/ui-design/16-ui-design-rules) 清楚的的案例解釋
+[Visual design rules you can safely follow every time](https://anthonyhobday.com/sideprojects/saferules/)
+
+- Color
+  - near-black/white instead of pure black/white
+    - #F2F2F2, #222222
+  - Lower letter spacing and line height with larger text. Raise them with smaller text
+    - big: 100% line height
+    - medium: 140%
+    - small(normal): 160%
+  - Measurements should be mathematically related
+    - spacing: 8px 16px 24px 32px
+    - text size/line height:
+      - 40px/48px
+      - 32px/40px
+      - 16px/24px
+  - body text at 16px or above
+  - Use a line length around 70 characters
+  - Make horizontal padding twice the vertical padding in buttons
+  - Use two typefaces at most
+  - Nest corners properly: set the inside corner radius to the outside corner radius, minus the distance between the two. ex: outside radius: 30px, inside corner radius: 10px.
+
+
+[16 little UI design rules that make a big impact - Adham Dannaway](https://www.adhamdannaway.com/blog/ui-design/16-ui-design-rules) 清楚的的案例解釋
+
 
 ## Font
 

@@ -9,6 +9,7 @@ tags:
 
 # Header1
 
+![foo](../../assets/blog/bar)
 
 🌿
 
