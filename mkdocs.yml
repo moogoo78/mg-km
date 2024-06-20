@@ -1,7 +1,7 @@
 site_name: MooGoo's Documentations
 
 nav:
-  - Home: index.md
+  - Tags: tags.md
   - Tech:
     - snippets: tech/snippets.md
     - Security: tech/security.md
@@ -45,8 +45,10 @@ nav:
     - nature/animal-description.md
     - nature/animal-behavior.md
     - nature/animal-diff.md
+    - nature/ocean.md
   - Blog:
     - blog/index.md
+
 theme:
   name: 'material'
   #custom_dir: overrides
@@ -65,6 +67,11 @@ theme:
   font:
     text: Roboto
     code: Roboto Mono
+  #icon:
+  #  tag:
+  #    html: fontawesome/brands/html5
+  #    js: fontawesome/brands/js
+  #    css:  fontawesome/brands/css3
 
 plugins:
   - blog:
@@ -75,21 +82,29 @@ plugins:
       post_readtime: false
       post_excerpt_separator: <!-- more -->
   - search
+  - tags:
+      tags_file: tags.md
+
+extra:
+  analytics:
+    provider: google
+    property: G-T9S48WVHD5
+  tags:
+    museum: museum
+#extra_css:
+#  - stylesheets/extra.css
 
 markdown_extensions:
   - pymdownx.highlight:
       anchor_linenums: true
       line_spans: __span
       pygments_lang_class: true
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
   - pymdownx.inlinehilite
   - pymdownx.snippets
   - pymdownx.superfences
   - footnotes
   - attr_list
   - md_in_html
-extra:
-  analytics:
-    provider: google
-    property: G-T9S48WVHD5
-#extra_css:
-#  - stylesheets/extra.css

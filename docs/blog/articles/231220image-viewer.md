@@ -1,17 +1,14 @@
 ---
 date: 2023-11-01
-title: a title
+title: Research image viewers
 categories:
-  - Journ
+  - Research
 tags:
-  - tag1
+  - unfinished
 draft: true
 ---
 
-# Header1
-
-
-
+# Image Viewers
 
 
 1. **IrfanView:**

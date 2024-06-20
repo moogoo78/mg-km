@@ -3,8 +3,6 @@ date: 2013-09-18
 title: 登山纜車之歌 Funiculì funiculà
 categories:
   - Music
-tags:
-  - tag1
 slug: funiculi_funicula
 ---
 

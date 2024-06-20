@@ -1,14 +1,14 @@
 ---
 date: 2023-12-18
-title: a title
+title: About Images
 categories:
-  - Journal
+  - Tech
 tags:
-  - tag1
+  - unfinished
 draft: true
 ---
 
-# Header1
+# About Images
 
 
 ## Image Resolution

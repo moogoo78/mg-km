@@ -1,6 +1,6 @@
 ---
 date: 2024-05-28
-title: a title
+title: STR Network的AI管理系統
 categories:
   - Presentation
 tags:
