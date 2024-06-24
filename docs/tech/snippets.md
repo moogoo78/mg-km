@@ -61,6 +61,31 @@ for (const [key, value] of Object.entries(object1)) {
 }
 ```
 
+```javascript title="fetch many urls and wait all promises"
+  const fetchData = async (url) => {
+    try {
+      let response = await fetch(url);
+      return await response.json();
+    } catch(error) {
+      console.error(`fetch error) ${error} | ${url}`);
+      return error.message;
+    }
+  };
+
+  const fetchURLs = async (urls) => {
+    return await Promise.all(urls.map( async ([key, url]) => {
+      let res = await fetchData(url);
+      return [key, res];
+    }));
+  };
+
+  fetchURLs(urls)
+    .then(data => {
+      console.log('Fetched data:', data)})
+    .catch(error => {
+      console.error('Error fetching data:', error)
+    });
+```
 ## HTML
 
 ```html title="usual layout structure"

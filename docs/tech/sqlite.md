@@ -35,6 +35,10 @@ $ cat dumpfile.sql | sqlite3 new.db
 .quit
 ```
 
+```text title="show run-time"
+.timer on
+```
+
 ### export
 
 ```text title="export to csv"
@@ -61,6 +65,19 @@ sqlite> .dump table_name
 
  sqlite> .headers on
  sqlite> .mode csv
+ sqlite> .import {FILE} {TABLE_NAME}
+```
+
+```text title="import from tsv (tabbed separate)"
+
+ sqlite> .mode tab
+ sqlite> .import {FILE} {TABLE_NAME}
+```
+
+```text title="import from tsv (tabbed separate), can escape double quote in text"
+
+ sqlite> .mode ascii # tab 或column都沒用
+ sqlite> .separator "\t"
  sqlite> .import {FILE} {TABLE_NAME}
 ```
 
@@ -98,3 +115,73 @@ $ sqlite3 -header -csv c:/sqlite/chinook.db < query.sql > data.csv
     - **INTEGER** as Unix Time, the number of seconds since 1970-01-01 00:00:00 UTC.
 
 
+## Full Text Search In SQLite
+
+### Intro
+
+via: [SQLite for beginners: Full Text Search - YouTube](https://www.youtube.com/watch?v=eXMA_2dEMO0)
+
+一般*LIKE* query
+```sql title="LIKE operator"
+SELECT count(*)
+FROM titles
+WHERE primary_title LIKE '%star wars%';
+```
+
+加index快一點
+```
+CREATE INDEX title_primary_title_idx on titles (primary_title);
+```
+
+### using FTS5
+
+```text title="check if has fts5 installed"
+sqlite> PRAGMA compile_options;
+```
+
+
+```sql title="create virtual table using fts5"
+CREATE VIRTUAL TABLE titles_fts
+USING fts5(
+  title_id, primary_titel, original_title
+);
+```
+
+```sql title="insert data to fts virtual table"
+INSERT INTO titles_fts (title_id, primary_title, original_title)
+SELECT title_id, primary_title, original_title
+FROM titles;
+```
+
+can use *TRIGGER* to sync both tables (watch youtube for more info)
+
+```sql title="match all columns"
+SELECT count(*)
+FROM titles t
+INNER JOIN tables_fts s on s.title_id = t.title_id
+WHERE titles_fts MATCH 'star wars';
+```
+
+```sql title="match specific columns"
+SELECT count(*)
+FROM titles t
+INNER JOIN tables_fts s on s.title_id = t.title_id
+WHERE titles_fts MATCH '{primary_title original_title}: star wars';
+```
+
+```sql title="get matched top 10"
+SELECT t.primary_title, t.original_title
+FROM titles t
+INNER JOIN tables_fts s on s.title_id = t.title_id
+WHERE titles_fts MATCH '{primary_title original_title}: star wars'
+LIMIT 10;
+```
+
+```sql title="bm25 ranking function (0, 10, 2 is weight of column)"
+SELECT bm25(titles_fts, 0, 10, 2), rank, t.primary_title, t.original_title
+FROM titles t
+INNER JOIN tables_fts s on s.title_id = t.title_id
+WHERE titles_fts MATCH '{primary_title original_title}: star wars'
+LIMIT 10;
+```
+rank seems not work...

@@ -143,6 +143,15 @@ cat some_file.txt | wl -c
 
 ### process data (awk, sed, grep, tr)
 
+```bash title="print certain line in a file"
+sed -n 6489p some_fine # print line number: 6489
+```
+
+```bash title="insert text to certain line"
+sed -i '1 i\foo' path/to/file # insert "foo" string to head of the file
+sed -i '2 i\bar' path/to/file # insert "foo" string to line 2
+```
+
 ```bash title="get url and download file in structured text file"
 cat foo.csv | awk -F, '{print "curl -O https://url.to/"$3".jpg"}' | bash
 ```

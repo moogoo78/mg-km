@@ -5,6 +5,7 @@ categories:
   - Research
 tags:
   - museum
+  - symposium
 ---
 
 # Collection Management Systems (TDWG 2020 Symposium)
@@ -23,8 +24,8 @@ Vince Smith
 
 - [RECODE: Towards a next-gen collections management system as part of the institutional and community data ecosystem](https://biss.pensoft.net/article/90886/)
 - [OSF | RECODE community workshop slides 2020-12-08.pptx](https://osf.io/uwabk)
+- [VPS_91297_Collier.pdf - Google 雲端硬碟](https://drive.google.com/file/d/1ISkRF-Ngoi3s70deAi1cB6J08su0Ebag/view) poster
 
-q
 多人協作?
 ![recode::community curation](../../assets/blog/2020-tdwg-sym/recode--community-curation.png)
 
