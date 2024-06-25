@@ -199,6 +199,12 @@ sed 's/$/,/' input_file > output_file
 
 [拿到Excel資料是1個欄位，很多列(Row)，要變成1列很多欄(Column)的形狀](../blog/articles/240130-csv-oneline.md)
 
+
+split big file to chunk (1000 line per file), prefix will gose to prefixaa, prefixab, prefixac...
+```bash title="split"
+split -l 1000 file-to-be-split prefix.
+```
+
 ### File Coding
 
 ```bash title="check file MIME coding"
