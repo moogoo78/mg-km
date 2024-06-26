@@ -80,6 +80,22 @@ SELECT COUNT(*), foo.some_id from (
 GROUP BY some_id HAVING count(*) > 1;
 ```
 
+## JSON
+
+[PostgreSQL: Documentation: 12: 9.15. JSON Functions and Operators](https://www.postgresql.org/docs/12/functions-json.html)
+
+Update data in JSONB field
+
+```sql title="using jsonb_set"
+UPDATE record
+SET source_data = jsonb_set(source_data, '{foo_name}', '"foo"', true),
+field_note = 'bar'
+WHERE id=161643;
+```
+
+arguments: `jsonb_set(target jsonb, path text[], new_value jsonb [, create_missing boolean])`
+
+
 ## Complex
 
 CAST string to int and use REGEX_REPLACE to clean out non-number char
