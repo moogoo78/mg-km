@@ -1,5 +1,8 @@
 # 動物救援
 
+野鳥
+
+![撿到野鳥怎麼辦](../assets/nature/bird-rescue.jpg)
 
 斑龜
 

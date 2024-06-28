@@ -84,6 +84,14 @@ GROUP BY some_id HAVING count(*) > 1;
 
 [PostgreSQL: Documentation: 12: 9.15. JSON Functions and Operators](https://www.postgresql.org/docs/12/functions-json.html)
 
+### query JSONB
+
+```sql title="query JSONB"
+select * from specimen_specimen where source_data ->'dups' @> '[{"SN":"69598"}]'
+```
+
+### update JSONB
+
 Update data in JSONB field
 
 ```sql title="using jsonb_set"

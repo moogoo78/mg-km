@@ -80,12 +80,6 @@ from some_table
 
 ref: [PostgreSQL: Documentation: 16: 9.9. Date/Time Functions and Operators](https://www.postgresql.org/docs/current/functions-datetime.html)
 
-### JSON
-
-```sql title="query JSONB"
-select * from specimen_specimen where source_data ->'dups' @> '[{"SN":"69598"}]'
-```
-
 ### Big data
 
 
