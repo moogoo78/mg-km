@@ -45,6 +45,17 @@ with open('eggs.csv', 'w', newline='') as csvfile:
     spamwriter.writerow(['Spam', 'Lovely Spam', 'Wonderful Spam'])
 ```
 
+```python title="write csv dict"
+import csv
+with open('eggs.csv', 'w', newline='') as csvfile:
+    spamwriter = csv.DictWriter(csvfile, fieldnames=['foo', 'bar', 'value'])
+    spamwriter.writerow({
+      'foo': 'x',
+      'bar': 'y',
+      'value': 'abc'
+    })
+```
+
 ## JavaScript
 
 ```javascript title="IIFE (Immediately Invoked Function Expression)"
