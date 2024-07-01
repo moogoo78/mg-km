@@ -1,7 +1,9 @@
 site_name: MooGoo's Documentations
 
 nav:
-  - Tags: tags.md
+  - About:
+    - index: index.md
+    - Tags: tags.md
   - Tech:
     - snippets: tech/snippets.md
     - Security: tech/security.md
@@ -41,11 +43,10 @@ nav:
     - music/songs.md
     - music/kindergarten.md
   - Nature:
+    - nature/field-guide.md
+    - nature/description.md
     - nature/animal-rescue.md
-    - nature/animal-description.md
     - nature/animal-behavior.md
-    - nature/animal-diff.md
-    - nature/ocean.md
   - Blog:
     - blog/index.md
 

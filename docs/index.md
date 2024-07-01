@@ -1,4 +1,4 @@
-# Home
+# index
 
 :see_no_evil:
 
