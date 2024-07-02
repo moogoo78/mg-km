@@ -83,7 +83,6 @@ find . -name foo -mtime 5
 find . -name ".DS_Store" -delete
 find . -type f -name '._*' -delete
 find . -type f -not -name '._*' -size -5k
-
 ```
 
 ```bash title="count number of files"
@@ -93,6 +92,7 @@ find [path] -type f | wc -l
 ``` bash title="batch change extension to lower case (.JPG → .jpg)"
 for f in *.JPG; do mv "$f" “${f%.JPG}.jpg”; done
 ```
+
 
 #### grep
 
@@ -140,6 +140,16 @@ du --max-depth=1 |sort -nr | cut -f2- | xargs du -hs
 ```bash title="count number of lines in a file"
 cat some_file.txt | wl -c
 ```
+
+#####  找出某種目錄名稱，統計總共多大
+
+```bash
+find /path/to/search -type d -name "" -print0 | xargs -0 du -sb | awk '{sum += $1} END {print sum}'
+```
+via: chatgpt
+
+- `print0` prints the full directory name on the standard output, followed by a null character (instead of a newline). This is useful to handle directory names with spaces.
+- `xargs -0` takes the null-separated output from `find` and passes it to `du`.
 
 ### process data (awk, sed, grep, tr)
 
