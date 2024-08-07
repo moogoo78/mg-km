@@ -56,6 +56,12 @@ datetime.strptime(row['last_login'], '%Y-%m-%d %H:%M:%S+00') # 2021-01-01 12:03:
 datetime.strptime(row['created_time'], '%Y-%m-%d %H:%M:%S.%f+00') # # 2021-01-01 12:03:34.934533+00
 ```
 
+### csv
+
+BOM header
+```python
+encoding='utf-8-sig'
+```
 
 ## Packages
 

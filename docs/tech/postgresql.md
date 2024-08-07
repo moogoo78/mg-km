@@ -103,7 +103,7 @@ TRUNCATE table_name RESTART IDENTITY;
 ```
 
 ```sql title="sequence 亂掉 duplicate key error"
-SELECT setval('my_tabel_id_seq', (SELECT max(id) FROM my_table));
+SELECT setval('my_table_id_seq', (SELECT max(id) FROM my_table));
 ```
 
 通常是執行了帶有auto-increment id的INSERT INTO，造成sequence沒有更新

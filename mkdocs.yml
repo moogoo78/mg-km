@@ -34,6 +34,9 @@ nav:
       - SQLite: tech/sqlite.md
       - DuckDB: tech/duckdb.md
       - Redis: tech/redis.md
+    - Application:
+      - Data Visualization: tech/data-viz.md
+      - Service: tech/service.md
     - Design:
       - Desgin: tech/design.md
       - Web Design: tech/web_design.md

@@ -62,6 +62,8 @@ yum --showduplicate list {package name}
 
 screenshot: `Windows+Shift+S`
 
+[分享一個讓老舊 Windows 筆電執行速度更快的方法 | The Will Will Web](https://blog.miniasp.com/post/2024/07/02/Share-a-method-to-make-old-Windows-laptops-run-faster?fbclid=IwZXh0bgNhZW0CMTEAAR0Xk15d7T_bwY3ItQTGaqHMWhoUoJA-msgH5C4kZ-0tJLq4ZYCMJ19Y5y8_aem_0FAYhoheokA85RcvDx-k8g)
+
 ### Servers
 修改local DNS
 

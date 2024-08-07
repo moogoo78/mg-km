@@ -24,6 +24,10 @@ window.addEventListener('load', function () {
 }, false);
 ```
 
+### Form
+
+- [Form Validation Part 1: Constraint Validation In HTML | CSS-Tricks](https://css-tricks.com/form-validation-part-1-constraint-validation-html/)
+
 ### Patterns
 - [Boilerplates | The Vanilla JS Toolkit](https://vanillajstoolkit.com/boilerplates/#Revealing-Module-Pattern)
 - [How to add private variables and helper methods to your vanilla JS constructor patterns | Go Make Things](https://gomakethings.com/how-to-add-private-variables-and-helper-methods-to-your-vanilla-js-constructor-patterns/)
