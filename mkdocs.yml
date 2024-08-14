@@ -50,6 +50,8 @@ nav:
     - nature/taxon.md
     - nature/animal-rescue.md
     - nature/animal-behavior.md
+  - Life:
+    - life/housing.md
   - Blog:
     - blog/index.md
 
