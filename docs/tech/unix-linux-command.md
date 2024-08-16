@@ -280,12 +280,18 @@ dd if=/dev/zero of=/tmp/test1.img bs=1G count=1 oflag=dsync
 
 ### Device
 
-#### check usb device
+check usb device
 
 ```bash title="check usb version (speed)"
 lsusb [-t]
 # or
 cat /sys/bus/usb/devices/usb{2}/speed
+```
+
+check CPU
+
+```bash title="check CPU"
+lscpu
 ```
 
 ### Multimedia
