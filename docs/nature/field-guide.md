@@ -17,3 +17,11 @@
 ### 排遺
 
 ![哺乳動物排遺檢索](../assets/nature/mammal-shit.jpg)
+
+## 蟲蟲
+
+### 蜘蛛
+豹蛛(Pardosa)跟狼蛛(Lycosa)比較。 `都是狼蛛科`
+
+![](../assets/nature/diff-Lycosa-Pardosa.png)
+忘記是那裡截圖的
