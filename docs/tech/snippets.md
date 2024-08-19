@@ -49,6 +49,7 @@ with open('eggs.csv', 'w', newline='') as csvfile:
 import csv
 with open('eggs.csv', 'w', newline='') as csvfile:
     spamwriter = csv.DictWriter(csvfile, fieldnames=['foo', 'bar', 'value'])
+    spamwriter.writeheader()
     spamwriter.writerow({
       'foo': 'x',
       'bar': 'y',
