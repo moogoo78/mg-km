@@ -207,7 +207,7 @@ cut -d, -f 1-3,6- < test.csv # A,B,C,F,G,H
 sed 's/$/,/' input_file > output_file
 ```
 
-[拿到Excel資料是1個欄位，很多列(Row)，要變成1列很多欄(Column)的形狀](../blog/articles/240130-csv-oneline.md)
+[拿到Excel資料是1個欄位，很多列(Row)，要變成1列很多欄(Column)的形狀](../blog/articles/2024/240130tech__csv-oneline.md)
 
 
 split big file to chunk (1000 line per file), prefix will gose to prefixaa, prefixab, prefixac...

@@ -2,9 +2,10 @@
 date: 2024-05-30
 title: AI course
 categories:
-  - Course
+  - Learn
 tags:
   - ai
+  - course
 drafts: true
 ---
 

@@ -1,4 +1,4 @@
-#[蜘蛛]Arachnida (Spider)
+# [蜘蛛]Arachnida (Spider)
 
 ## 蠅虎
 

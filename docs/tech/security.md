@@ -22,4 +22,4 @@
 - [ZAP](https://www.zaproxy.org/)
 
 ## 參考
-- [ZAP弱點掃描](../blog/articles/231201security-zap-scan.md)
+- [ZAP弱點掃描](../blog/articles/2023/231201tech__security-zap-scan.md)

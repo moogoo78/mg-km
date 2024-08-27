@@ -4,7 +4,7 @@
 
 ### Debian
 
-[如何知道目前Debian版本號碼](../blog/articles/231214how-to-check-debian-version.md)
+[如何知道目前Debian版本號碼](../blog/articles/2023/231214tech__how-to-check-debian-version.md)
 
 #### Install
 
