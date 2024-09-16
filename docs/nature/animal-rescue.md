@@ -3,6 +3,7 @@
 野鳥
 
 ![撿到野鳥怎麼辦](../assets/nature/bird-rescue.jpg)
+[台灣野生鳥類緊急救助平台 | Facebook](https://www.facebook.com/groups/1618705091745894/)
 
 斑龜
 
