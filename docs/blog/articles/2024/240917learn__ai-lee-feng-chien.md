@@ -21,9 +21,9 @@ categories:
     - 不像傳統AI(google search)，弭平地方差異 (NTU在各個國家是不同意思)，LLM是一言堂。沒有時間感。
 - 用AI最重要是generating ideas (就像聊天獲得靈感)
 
-![dancing with AI](../../assets/blog/2024/dancing-with-ai_quick-learner.png)
-![dancing with AI](../../assets/blog/2024/dancing-with-ai_minor-country.png)
-![dancing with AI](../../assets/blog/2024/dancing-with-ai_edge-taiwan-chance.png)
+![dancing with AI](../../../assets/blog/2024/dancing-with-ai_quick-learner.png)
+![dancing with AI](../../../assets/blog/2024/dancing-with-ai_minor-country.png)
+![dancing with AI](../../../assets/blog/2024/dancing-with-ai_edge-taiwan-chance.png)
 
 
 
