@@ -6,6 +6,18 @@
 console.log(n.toLocaleString());
 ```
 
+```text
+parseInt('') => NaN
+'' === '' => true
+NaN === NaN => false
+```
+
+```javascript
+// regex: Capturing Group
+/\[(.*)\]__(.*)__([0-9]*)/.exec('[10]__foo__234')
+// => [ "[10]__fofo__234", "10", "fofo", "234" ]
+```
+[Capturing group: (...) - JavaScript | MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Regular_expressions/Capturing_group)
 
 ## Vanilla
 - [My top JavaScript utilities, in just One Line of Code! | Phuoc Nguyen](https://phuoc.ng/collection/1-loc/)

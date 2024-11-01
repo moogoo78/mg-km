@@ -21,5 +21,15 @@
 
 - [ZAP](https://www.zaproxy.org/)
 
+
+## Authentication
+
+Top 4 Forms of Authentication Mechanisms
+![](https://pbs.twimg.com/media/GY-gVM6bAAcRFzJ?format=jpg&name=900x900)
+https://x.com/alexxubyte/status/1841867067370439086
+
+
+[Why Do Many People Not Recommend Using JWT? - DEV Community](https://dev.to/safdarali/why-do-many-people-not-recommend-using-jwt-1ol5?context=digest)
+
 ## 參考
 - [ZAP弱點掃描](../blog/articles/2023/231201tech__security-zap-scan.md)

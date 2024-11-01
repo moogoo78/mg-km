@@ -59,8 +59,11 @@ nav:
         - nature/taxon-seagrass.md
     - nature/animal-rescue.md
     - nature/animal-behavior.md
+    - nature/geologic-time-scale.md
   - Life:
     - life/housing.md
+  - Web:
+    - web/index.md
   - Blog:
     - blog/index.md
 
@@ -123,3 +126,8 @@ markdown_extensions:
   - footnotes
   - attr_list
   - md_in_html
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format

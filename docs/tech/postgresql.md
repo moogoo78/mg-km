@@ -141,6 +141,18 @@ ORDER BY
     indexname;
 ```
 
+## JSON-related
+
+```sql
+SELECT *
+FROM unit
+WHERE EXISTS (
+    SELECT 1
+    FROM jsonb_array_elements(source_data->'dups') AS dups
+    WHERE dups->>'dupID' = '184308'
+);
+```
+
 ## PostGIS
 
 enable postgis extension:
