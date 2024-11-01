@@ -1,6 +1,7 @@
 # SQL Syntax
 
 Basic
+
 ```sql
 CREATE DATABASE mydb
   DEFAULT CHARACTER SET utf8
@@ -80,6 +81,17 @@ SELECT COUNT(*), foo.some_id from (
 GROUP BY some_id HAVING count(*) > 1;
 ```
 
+## Functions
+
+### string_agg
+
+```sql title="group and join multiple rows, seperate by comma"
+SELECT customer_name, mobile, email, string_agg(created_time::text, ',') action_time, string_agg(hotel, ',')
+FROM hotel_booking
+GROUP BY customer_name, mobile, email
+ORDER BY action_time;
+```
+
 ## JSON
 
 [PostgreSQL: Documentation: 12: 9.15. JSON Functions and Operators](https://www.postgresql.org/docs/12/functions-json.html)
@@ -102,7 +114,6 @@ WHERE id=161643;
 ```
 
 arguments: `jsonb_set(target jsonb, path text[], new_value jsonb [, create_missing boolean])`
-
 
 ## Complex
 
