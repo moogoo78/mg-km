@@ -81,7 +81,9 @@ SELECT COUNT(*), foo.some_id from (
 GROUP BY some_id HAVING count(*) > 1;
 ```
 
-## Functions
+## Aggregate Functions
+
+[PostgreSQL: Documentation: 17: 9.21. Aggregate Functions](https://www.postgresql.org/docs/current/functions-aggregate.html)
 
 ### string_agg
 
