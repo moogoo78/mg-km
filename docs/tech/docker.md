@@ -18,6 +18,26 @@
 
 - [Run x86 Docker containers with Rosetta on Mac | Level Up Coding](https://levelup.gitconnected.com/docker-on-apple-silicon-mac-how-to-run-x86-containers-with-rosetta-2-4a679913a0d5) ⇒ 影響套件: geopandas, pillow Feb 9, 2023
 
+### start docker service
+
+```bash title="yum (AWS Linux)"
+sudo service docker start
+```
+
+### install docker compose (if compose not in default command)
+
+```bash title="get latest version script"
+sudo curl -L https://github.com/docker/compose/releases/latest/download/docker-compose-$(uname -s)-$(uname -m) -o /usr/local/bin/docker-compose
+sudo chmod +x /usr/local/bin/docker-compose
+# verify
+docker-compose version
+```
+
+# make docker  autostart
+$-> sudo chkconfig docker on
+# I strongly recommend install also: git (sudo yum install -y git)
+
+$-> sudo reboot # only if for you it is neccesary
 
 ### ARG & ENV
 
