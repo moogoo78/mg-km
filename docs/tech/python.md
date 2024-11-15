@@ -113,7 +113,17 @@ my_result_qry = session.query(MyResult).from_statement(sql_qry)
 ```python title="query json"
 Person.query.filter(Person.source_data['pid'].astext == x)
 ```
-要加 `astext` 不然找不到
+要加 `astext` 不然找不到 (就如同`->>`, 沒加astext就是`->`)
+
+
+要重新給一個值，不然程式會以為沒變
+
+```python title="Update json field data"
+record = session.query(YourModel).first()
+record.data = {**record.data, "new_key": "new_value"}  # Reassign with a new dictionary
+session.commit()
+```
+
 
 
 ## Reference
