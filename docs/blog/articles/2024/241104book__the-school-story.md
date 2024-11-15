@@ -9,7 +9,7 @@ categories:
 The School Story, Andrew Clements
 
 
-![](../../assets/blog/books/the-school-story.jpg)
+![](../../../assets/blog/books/the-school-story.jpg)
 
 圖片來源: [安德魯．克萊門斯 6: 作弊 (第2版) | 成長／校園小說 | 商品 | 誠品線上](https://www.eslite.com/product/1001116172682254455003)
 

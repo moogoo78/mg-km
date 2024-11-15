@@ -26,6 +26,10 @@ $ git checkout aLocalBranch
 $ git merge origin/aRemoteBranch
 ```
 
+```bash title="push to remote"
+git push {remote-repo} {branch name}
+```
+
 ```bash title="Revert remote repo"
  git reset --hard <commit-hash>
  git push -f origin master
