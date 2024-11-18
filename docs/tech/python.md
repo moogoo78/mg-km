@@ -21,6 +21,10 @@ f'{n:03}'
 sorted(student_tuples, key=lambda student: student[2])
 ```
 
+```python title="assign new dict with new key value"
+record.data = {**record.data, "new_key": "new_value"}
+```
+
 ### file and directories
 
 ```python title="mkdir"
