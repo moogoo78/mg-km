@@ -15,3 +15,7 @@ tags:
 # 2. 
 
 
+
+```
+filter(value.parseJson(), x, x.rank=='family')[0].taxon
+```

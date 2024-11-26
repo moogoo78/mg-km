@@ -141,6 +141,12 @@ ORDER BY
     indexname;
 ```
 
+
+```sql
+CREATE INDEX index_name
+ON table_name (column1, column2, ...);
+```
+
 ## JSON-related
 
 ```sql
