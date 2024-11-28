@@ -47,6 +47,7 @@ nav:
     - music/kindergarten.md
   - Nature:
     - nature/field-guide.md
+    - nature/taiwan.md
     - 物種:
       - 動物:
         - nature/taxon-mammal.md
@@ -56,6 +57,7 @@ nav:
         - nature/taxon-centipede-and-millipede.md
         - nature/taxon-snake.md
         - nature/taxon-horseshoe-crab.md
+        - nature/taxon-coral.md
       - 植物:
         - nature/taxon-seagrass.md
     - nature/animal-rescue.md
