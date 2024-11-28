@@ -3,7 +3,7 @@ tags:
   - marine
 ---
 
-# 鱟
+# [海洋]鱟
 
 ![horseshoe-crab](../assets/nature/horseshoe-crab.jpg)
 
