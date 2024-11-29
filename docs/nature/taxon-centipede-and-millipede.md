@@ -119,5 +119,6 @@ centipedes
 
 - [蜈蚣 - 维基百科，自由的百科全书](https://zh.wikipedia.org/zh-tw/蜈蚣)
 - [gaga::小動物圖鑑](http://gaga.biodiv.tw/new23/cp04_70.htm)
-- [海大 熱帶生物研究社 - 【多棘蜈蚣】 多棘蜈蚣 (Scolopendra subspinipes multidens)... | Facebook](https://www.facebook.com/permalink.php/?story_fbid=2011310962350872&id=203140263167960&locale=zh_TW)
+- [facebook::海大 熱帶生物研究社 - 【多棘蜈蚣】 多棘蜈蚣 (Scolopendra subspinipes multidens)... | Facebook](https://www.facebook.com/permalink.php/?story_fbid=2011310962350872&id=203140263167960&locale=zh_TW)
+- [Facebook::TPHA Ecotourism 台北城市狩獵::臺日合作新發表的半水棲蜈蚣 Scolopendra alcyona 琉神大百足！](https://www.facebook.com/photo.php?fbid=287540372840113&id=104946524432833&set=a.112429740351178&locale=hu_HU)
 - [【虫谱大观】蜈蚣所属分类浅析_亚纲](https://www.sohu.com/a/443614888_648402)

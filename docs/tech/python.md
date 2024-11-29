@@ -25,6 +25,18 @@ sorted(student_tuples, key=lambda student: student[2])
 record.data = {**record.data, "new_key": "new_value"}
 ```
 
+
+### datetime, time, calendar
+
+找每個月的最後一天是幾號
+
+```python
+import calendar
+
+week_day_of_first_day, num_days = calendar.monthrange(year, month)
+# weekday_of_first_day: 0-6 (Mon...)
+```
+
 ### file and directories
 
 ```python title="mkdir"
