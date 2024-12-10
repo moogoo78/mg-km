@@ -69,7 +69,6 @@ sqlite> .dump table_name
 ```
 
 ```text title="import from tsv (tabbed separate)"
-
  sqlite> .mode tab
  sqlite> .import {FILE} {TABLE_NAME}
 ```
@@ -79,6 +78,13 @@ sqlite> .dump table_name
  sqlite> .mode ascii # tab 或column都沒用
  sqlite> .separator "\t"
  sqlite> .import {FILE} {TABLE_NAME}
+```
+如果資料裡有 `|` (vertical bar)，SQLite import也會造成欄位判斷錯誤，如: `expected 1 columns but found 2 - extras ignored`，用以上方法也可以成功匯入。
+
+[Command Line Shell For SQLite](https://www.sqlite.org/cli.html)
+
+```
+sqlite> .import --csv foo.csv footable
 ```
 
 ```bash title="export/import csv by command"

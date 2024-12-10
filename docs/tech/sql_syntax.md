@@ -12,7 +12,11 @@ ADD `intro` text COLLATE 'utf8_general_ci' NULL AFTER `status`;
 
 ALTER TABLE `run_log`
 ADD `step` int(11) NULL;
+
+ALTER TABLE my_table
+ADD new_column some_data_type;
 ```
+
 
 CRUD:
 ```sql
