@@ -43,6 +43,7 @@ nav:
       - Resources: tech/web_design_resources.md
       - Gallery: tech/web_design_gallery.md
   - Music:
+    - music/about.md
     - music/songs.md
     - music/kindergarten.md
   - Nature:
