@@ -96,6 +96,8 @@ encoding='utf-8-sig'
 
 ### SQLAlchemy
 
+#### join
+
 ```python
 query = session.query(UserSong)
 query = query.join(Song, Song.id == UserSong.song_id)
@@ -125,6 +127,13 @@ sql_qry = select([foo.c.id.label("id"),
 
 my_result_qry = session.query(MyResult).from_statement(sql_qry)
 ```
+
+ref:
+
+- [SQLAlchemy 2.0(05)查詢資料(2-join) - HackMD](https://hackmd.io/@shaoeChen/ByFhGXvk3)
+
+
+#### JSON
 
 ```python title="query json"
 Person.query.filter(Person.source_data['pid'].astext == x)
