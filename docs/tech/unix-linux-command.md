@@ -65,7 +65,7 @@ sed 's/$/,/' input_file > output_file
 
 ### 找東西
 
-find infile (grep-like):
+find in file (grep-like):
 
 - [BurntSushi/ripgrep: ripgrep recursively searches directories for a regex pattern while respecting your gitignore](https://github.com/BurntSushi/ripgrep)
 
@@ -75,6 +75,11 @@ find infile (grep-like):
 ```bash title="find file size < 5k"
 find . -size -5k -type f
 ```
+
+```bash titil="find files create in 5mins"
+find . -cmin -5
+```
+
 ```bash title="find file named: foo and modified in 5 days"
 find . -name foo -mtime 5
 ```
@@ -92,7 +97,6 @@ find [path] -type f | wc -l
 ``` bash title="batch change extension to lower case (.JPG → .jpg)"
 for f in *.JPG; do mv "$f" “${f%.JPG}.jpg”; done
 ```
-
 
 #### grep
 

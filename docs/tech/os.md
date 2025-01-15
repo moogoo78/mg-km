@@ -19,6 +19,22 @@ install [Debian -- Details of package gnome-tweaks in bookworm](https://packages
 sudo tasksel
 ```
 
+[Desktop Entry](https://specifications.freedesktop.org/desktop-entry-spec/latest/) (launcher, icon)
+
+path: `~/.local/share/applications/{app_name}/{app_name}.desktop`
+
+```ini
+[Desktop Entry]
+Name=Zotero
+Exec=bash -c "$(dirname $(realpath $(echo %k | sed -e 's/^file:\\/\\///')))/zotero -url %U"
+Icon=/opt/zotero/icons/icon128.png
+Type=Application
+Terminal=false
+Categories=Office;
+MimeType=text/plain;x-scheme-handler/zotero;application/x-research-info-systems;text/x-research-info-systems;text/ris;application/x-endnote-refer;application/x-inst-for-Scientific-info;application/mods+xml;application/rdf+xml;application/x-bibtex;text/x-bibtex;application/marc;application/vnd.citationstyles.style+xml
+X-GNOME-SingleWindow=true
+```
+
 #### 輸入法
 
 切換語系 `Super Key + Space` | 切換輸入法 `Ctrl + Shift`
