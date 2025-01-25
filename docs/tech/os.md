@@ -74,6 +74,13 @@ yum --showduplicate list {package name}
 
 ## Windows
 
+### WSL
+
+mount external hard drive
+```bash
+sudo mount -t drvfs D: /mnt/d
+```
+
 ### Desktop
 
 screenshot: `Windows+Shift+S`
