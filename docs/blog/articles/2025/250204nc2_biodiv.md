@@ -43,7 +43,7 @@ tags:
 
 ### 實際處理紀錄
 
-### 分析Database Schema
+#### 分析Database Schema
 
 文字內容
 
@@ -97,7 +97,7 @@ sqlite> .import post.csv post
 甚至，python mysql client 直接讀取mysql也可以，但是我比較熟adminer.php，也習慣用adminer.php查看資料，所以才花點力氣轉來轉去。
 
 
-### Transform Data
+#### Transform Data
 
 寫一個script處理: `scrap-data.py`
 
@@ -110,7 +110,7 @@ sqlite> .import post.csv post
 
 4. 產出整理後的資料: eggs.csv (4千多筆)
 
-### 11ty Static Site Generator for Render
+#### 11ty Static Site Generator for Render
 
 `make-markdown.py`
 
@@ -118,8 +118,8 @@ sqlite> .import post.csv post
 - 產生所有科跟屬的清單頁面，直接匯出到 `11ty_folder/posts/plantae-index`
 - 種的頁面匯出到 `11ty_folder/posts/plantae`
 - 首頁的科清單是用產出的family.txt，手動貼到index.njk裡
- 
-#### 11ty build
+
+11ty build: 
 
 11ty配合[High Performance Blog](https://github.com/google/eleventy-high-performance-blog) template產生最終呈現網頁。
 
