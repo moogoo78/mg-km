@@ -148,10 +148,3 @@ Legacy Site (nc.biodiv.tw)
 ## 貢獻
 
 歡迎任何貢獻！
-
-
-
-
-
-
-
