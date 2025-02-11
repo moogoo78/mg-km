@@ -132,7 +132,29 @@ ref:
 
 - [SQLAlchemy 2.0(05)查詢資料(2-join) - HackMD](https://hackmd.io/@shaoeChen/ByFhGXvk3)
 
+### Celery
 
+```bash title="查看節點統計資訊"
+celery -A your_project inspect stats
+```
+
+tatal: {'task.xxx': 數字} -> 執行的次數
+
+```bash title="查看正在執行的任務"
+celery -A your_project inspect active
+```
+
+```bash title="查看活躍的 Workers"
+celery -A your_project_name status
+```
+
+```bash title="restart worker"
+celery -A your_project_name worker --loglevel=info
+```
+
+```bash title="同時處理 4 個任務"
+celery -A your_project_name worker --concurrency=4
+```
 #### JSON
 
 ```python title="query json"

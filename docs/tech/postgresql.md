@@ -122,6 +122,23 @@ SELECT setval('my_table_id_seq', (SELECT max(id) FROM my_table));
 
 - [Explain PostgreSQL](https://explain.tensor.ru/plan/) 視覺化 explain
 
+Check active queries:
+
+```sql
+SELECT pid, query, state
+FROM pg_stat_activity
+WHERE state != 'idle';
+```
+
+Look for long-running operations:
+
+```sql
+SELECT pid, query, state, age(clock_timestamp(), query_start) as query_duration
+FROM pg_stat_activity
+WHERE state != 'idle'
+ORDER BY query_duration DESC;
+```
+
 ## Admin
 
 list indexes
