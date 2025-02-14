@@ -21,6 +21,7 @@ nav:
       - tmux: tech/tmux.md
       - Docker: tech/docker.md
       - Emacs: tech/emacs.md
+      - Vim: tech/vim.md
       - Mkdocs-material: tech/mkdocs-material.md
     - Programming Language:
       - Python: tech/python.md

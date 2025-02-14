@@ -7,17 +7,34 @@
 ## Nginx
 
 
-### test config
+### Config
 
-```bash title="test config file"
+Test config file
+
+```bash
 nginx -t
 ```
 
-```bash title="display all config, virtual hosts"
+Display all config, virtual hosts
+
+```bash
 nginx -T
 ```
 
-### url routing
+Basic Authentication
+```text
+server {
+    ...
+    auth_basic           "Administrator’s Area";
+    auth_basic_user_file conf/htpasswd;
+
+    location /public/ {
+        auth_basic off;
+    }
+}
+```
+
+#### URL routing
 
 ```text title="multiple path same config"
 location ~ ^/(path1/foo|path2/bar)/ {
@@ -33,6 +50,9 @@ location ~ ^/(path1/foo|path2/bar)/ {
         try_files $uri /index.html;
     }
 ```
+
+
+
 ### Common Issues
 
 413 Request Entity Too Large

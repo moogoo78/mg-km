@@ -1,4 +1,12 @@
-# 房子裝潢水電
+# 居家生活
+
+
+## 家事
+
+![](../assets/life/housing/HSG-Printable-Laundry-Guide-English.png)
+[source](https://hotelsuppliesgroup.com/product/printable-laundry-guide-english/)
+
+## 裝潢水電
 
 弱電箱
 ![房子裝潢水電-弱電箱](../assets/life/housing/20981308434_2d4e79938f_o.jpg)
